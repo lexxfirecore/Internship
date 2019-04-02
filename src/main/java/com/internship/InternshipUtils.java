@@ -12,6 +12,7 @@ public class InternshipUtils {
 
     public static void main(String[] args) {
         printInters();
+        test();
     }
 
     private static void printInters() {
