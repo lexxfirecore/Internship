@@ -13,8 +13,8 @@ package com.internship;
 public class StringBuilders {
 
     public static void main(String[] args) {
-        System.out.println(StringBuilders.class.getName() + ": ");
-        InternshipUtils.variantele(1);
+   //     System.out.println(StringBuilders.class.getName() + ": ");
+
         varianta1();
         varianta2();
         varianta3();

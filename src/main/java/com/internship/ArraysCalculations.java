@@ -1,6 +1,6 @@
 package com.internship;
 
-import com.internship.arrays.ExempluArray;
+import com.internship.margaritaq.ExempluArray;
 
 /**
  * Created by lexx on 02-Apr-19.
@@ -8,7 +8,7 @@ import com.internship.arrays.ExempluArray;
 public class ArraysCalculations {
     public static void main(String[] args) {
         System.out.println(ArraysCalculations.class.getName() + ": ");
-        InternshipUtils.variantele(2);
+
         arr_varianta_1();
         arr_varianta_2();
         arr_varianta_3();

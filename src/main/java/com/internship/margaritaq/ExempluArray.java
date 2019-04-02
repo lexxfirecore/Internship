@@ -1,4 +1,4 @@
-package com.internship.arrays;
+package com.internship.margaritaq;
 
 import java.util.Random;
 import java.util.Scanner;
