@@ -1,0 +1,3 @@
+String.
+Exemplu de program cu StringBuilder si StringBuffer.
+De explicat ce inseamna Mutable si Immutable;

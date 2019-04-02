@@ -1,0 +1,10 @@
+
+Importeaza apache-commons-lang-3 cu ajutorul lui Maven.
+Scrie un program care foloseste metode din clasa StringUtils
+
+
+Varianta 1: IndexOf, Rotate si SubstringAfter
+Varianta 2: IsEmpty, startsWith si Reverse
+Varianta 3: Trim, IsBlank, Capitalize
+Varianta 4: Contains, SubstringBefore, IsNumeric
+Bonus: Alte metode din: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html.
