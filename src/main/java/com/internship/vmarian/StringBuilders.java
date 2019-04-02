@@ -13,8 +13,8 @@ import java.lang.*;
 public class StringBuilders {
 
     public static void main(String[] args) {
-        System.out.println(StringBuilders.class.getName() + ": ");
-        InternshipUtils.variantele(1);
+    //System.out.println(StringBuilders.class.getName() + ": ");
+
         varianta1();
         varianta2();
         varianta3();
@@ -25,7 +25,7 @@ public class StringBuilders {
 
     private static void varianta1() {
         // TODO: insert your name and code here
-        // StringBuffer este și mutabil și sincronizat, iar StrinBuilder este mutabil dar nesicronizat.
+        //       StringBuffer este și mutabil și sincronizat, iar StrinBuilder este mutabil dar nesicronizat
 
                 StringBuilder strBuilder = new StringBuilder("Core ");
                 strBuilder.append(" Java ");
