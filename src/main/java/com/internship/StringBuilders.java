@@ -29,6 +29,10 @@ public class StringBuilders {
 
     private static void varianta2() {
         // TODO: insert your name and code here
+        // Varianta2: Margarita, pune aici codul si fa commit si push
+        // nam aici cod
+
+
     }
 
     private static void varianta3() {

@@ -1,5 +1,7 @@
 package com.internship;
 
+import com.internship.arrays.ExempluArray;
+
 /**
  * Created by lexx on 02-Apr-19.
  */
@@ -19,6 +21,9 @@ public class ArraysCalculations {
     }
 
     private static void arr_varianta_2() {
+        System.out.println("Varianta 2: Margarita.");
+
+        ExempluArray.main();
 
     }
 
