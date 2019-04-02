@@ -7,26 +7,26 @@ public class ArraysCalculations {
     public static void main(String[] args) {
         System.out.println(ArraysCalculations.class.getName() + ": ");
         InternshipUtils.variantele(2);
-        margoArrayCalculations();
-        vaseaArrayCalculations();
-        vaneaArrayCalculations();
-        marioArrayCalculations();
+        arr_varianta_1();
+        arr_varianta_2();
+        arr_varianta_3();
+        arr_varianta_4();
 
     }
 
-    private static void margoArrayCalculations() {
+    private static void arr_varianta_1() {
 
     }
 
-    private static void vaseaArrayCalculations() {
+    private static void arr_varianta_2() {
 
     }
 
-    private static void vaneaArrayCalculations() {
+    private static void arr_varianta_3() {
 
     }
 
-    private static void marioArrayCalculations() {
+    private static void arr_varianta_4() {
     }
 
 }
