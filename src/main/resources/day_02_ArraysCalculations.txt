@@ -4,19 +4,15 @@ De facut un array unidimensional mai numit si vector,
 de introdus numarul de elemente de la tastatura (se poate de folosit clasa Scanner)
 de populat elementele tabloului cu numere negative si pozitive utilizind clasa Random.
 
-Vasea
 Varianta_1: calculeaza suma, produsul, media aritmetica si calculeaza formula:
 produs * suma / media
 
-Margarita
 Varianta_2: calculeaza min si max si calculeaza formula:
 min * max / nr_elem
 
-Ion
 Varianta_3: extrage numerele pozitive si negative in doua arrayy-uri (sau List) separate si calculeaza suma modulelor lor:
 |suma(array_pozitive)| + |suma(array_negative)|
 
-Mario
 Varianta_4: calculeaza suma numerelor negative si produsul numerelor pozitive si calculeaza restul impartitii intre produs si suma.
 restul ( produs(array_negative) / suma(array_pozitive) )
 
