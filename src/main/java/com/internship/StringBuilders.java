@@ -29,8 +29,35 @@ public class StringBuilders {
 
     private static void varianta2() {
         // TODO: insert your name and code here
-        // Varianta2: Margarita, pune aici codul si fa commit si push
-        // nam aici cod
+        System.out.println("Margarita");
+        /* Ce inseamna mutable?
+        Mutable inseamna ca la crearea unui obiect
+        se aloca o "cutiuta" de memorie si apoi cand se lucreaza cu acest obiect
+        si se introduc schimbari ele se pastreaza in aceeas cutiuta creata initial.
+        Ce inseamna imutable?
+        String e imutabil, de fiecare data cand se introduc ceva schimbari el aloca
+        memorie noua, adica de fiecare data se creaza cutiuta noua.
+         De ce nui bine de folosit string? Prin urmare daca
+        este mult de lucru cu schimbari se umpla repede memoria.
+        De ce se foloseste StringBuilder si StringBuffer?
+        Aceste clase sunt mutabile deci economisesc memorie cand e nevoie de lucrat
+        cu text care se modifica des.
+         Diferentele dintre ele?
+         StringBuilder   | StringBuffer
+         nui singronizat | e sinhronizat
+         nui tread safety| poate concomitent avea mai multe treaduri
+         e mai rapid     | e mai incet din cauza ca e sincronizat
+         */
+        StringBuilder str = new StringBuilder("Java");
+        str.append(8);
+        str.delete(0,1);
+        System.out.println( "Capacitatia: "+str.capacity());
+        System.out.println(str);
+        StringBuffer stb = new StringBuffer("hahaha");
+        stb.append(7);
+        stb.deleteCharAt(0);
+        System.out.println("Capacitatia: "+stb.capacity());
+        System.out.println(stb);
 
 
     }
