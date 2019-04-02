@@ -1,7 +1,9 @@
+Pasul 1:
+Descarca si adauga la proiect libraria apache-commons, o cauti pe net in forma de jar.
+Tutorial aici: https://www.youtube.com/watch?v=QAJ09o3Xl_0
 
-Importeaza apache-commons-lang-3 cu ajutorul lui Maven.
+Importeaza clasa StringUtils din libraria apache commons-lang si utilizeaza metodele ei in codul tau.
 Scrie un program care foloseste metode din clasa StringUtils
-
 
 Varianta 1: Contains, SubstringBefore, IsNumeric
 Varianta 2: IsEmpty, startsWith si Reverse
@@ -9,3 +11,10 @@ Varianta 3: IndexOf, Rotate si SubstringAfter
 Varianta 4: Trim, IsBlank, Capitalize
 
 Bonus: Alte metode din: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html.
+
+Pasul 2:
+Sterge libraria din proiect si adauga libraria in maven ca dependency.
+
+Importeaza apache-commons-lang cu ajutorul lui Maven si asigurate ca codul lucreaza exact ca in pasul 1.
+https://youtu.be/pt3uB0sd5kY
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
