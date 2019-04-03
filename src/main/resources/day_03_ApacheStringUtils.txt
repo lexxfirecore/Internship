@@ -5,10 +5,9 @@ Tutorial aici: https://www.youtube.com/watch?v=QAJ09o3Xl_0
 Importeaza clasa StringUtils din libraria apache commons-lang si utilizeaza metodele ei in codul tau.
 Scrie un program care foloseste metode din clasa StringUtils
 
-Varianta 1: Contains, SubstringBefore, IsNumeric
-Varianta 2: IsEmpty, startsWith si Reverse
-Varianta 3: IndexOf, Rotate si SubstringAfter
-Varianta 4: Trim, IsBlank, Capitalize
+Varianta 1: Contains, SubstringBefore, IsNumeric, Trim
+Varianta 2: IsEmpty, startsWith, Reverse, Capitalize
+Varianta 3: IndexOf, Rotate si SubstringAfter, IsBlank
 
 Bonus: Alte metode din: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html.
 

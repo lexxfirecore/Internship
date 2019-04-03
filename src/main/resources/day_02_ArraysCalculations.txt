@@ -13,10 +13,11 @@ min * max / nr_elem
 Varianta_3: extrage numerele pozitive si negative in doua arrayy-uri (sau List) separate si calculeaza suma modulelor lor:
 |suma(array_pozitive)| + |suma(array_negative)|
 
-Varianta_4: calculeaza suma numerelor negative si produsul numerelor pozitive si calculeaza restul impartitii intre produs si suma.
+Bonus 1:
+calculeaza suma numerelor negative si produsul numerelor pozitive si calculeaza restul impartitii intre produs si suma.
 restul ( produs(array_negative) / suma(array_pozitive) )
 
-Bonus:
+Bonus 2:
 De creat un array cu numere float.  De extras partea intreaga si partea flotanta in doua array-uri separate.
 De calculat sumele la fiecare si suma totala.
 De comparat rezultatul obtinut cu suma array-ului original.
