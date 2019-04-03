@@ -11,21 +11,21 @@ public class Zoo {
 
         menu();
 
-        menagerie_1();
-        menagerie_2();
-        menagerie_3();
+        zoo_1();
+        zoo_2();
+        zoo_3();
 
     }
 
-    private static void menagerie_1() {
+    private static void zoo_1() {
 
     }
 
-    private static void menagerie_2() {
+    private static void zoo_2() {
 
     }
 
-    private static void menagerie_3() {
+    private static void zoo_3() {
 
     }
 
@@ -37,13 +37,13 @@ public class Zoo {
             varianta = scanner.nextInt();
             switch (varianta) {
                 case 1:
-                    menagerie_1();
+                    zoo_1();
                     break;
                 case 2:
-                    menagerie_2();
+                    zoo_2();
                     break;
                 case 3:
-                    menagerie_3();
+                    zoo_3();
                     break;
                 default:
                     System.out.println("Nu exista asa varianta!");
