@@ -18,6 +18,7 @@ public class StringBuilders {
         System.out.println(StringBuilders.class.getName() + ": ");
         menu();
 
+        //test
     }
 
     private static void varianta1() {
