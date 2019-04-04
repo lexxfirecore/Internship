@@ -1,8 +1,6 @@
 package com.internship.zoo;
 
 
-import javax.print.attribute.standard.PrinterInfo;
-
 interface Talking{
     void say();
 }
