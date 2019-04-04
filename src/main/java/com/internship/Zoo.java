@@ -1,5 +1,8 @@
 package com.internship;
 
+import com.internship.zoo.Cat;
+import com.internship.zoo.Dolphin;
+
 import java.util.Scanner;
 
 /**
@@ -22,6 +25,24 @@ public class Zoo {
     }
 
     private static void zoo_2() {
+        Dolphin dolfi = new Dolphin();
+        Dolphin dolf = new Dolphin("Dulcea",5);
+        Dolphin dodo = new Dolphin("Kobo",4,3);
+
+        Dolphin.jump();
+        Dolphin.say();
+        Dolphin.swim();
+
+        Cat mur = new Cat();
+        Cat meau = new Cat("Monea",4);
+        Cat murmur = new Cat("Murca",2,3);
+
+        Cat.purr();
+        Cat.run();
+        Cat.say();
+        Cat.walk();
+
+
 
     }
 
