@@ -1,7 +1,9 @@
 package com.internship;
 
 import com.internship.zoo.Cat;
+import com.internship.zoo.Dog;
 import com.internship.zoo.Dolphin;
+import com.internship.zoo.Dove;
 
 import java.util.Scanner;
 
@@ -21,6 +23,25 @@ public class Zoo {
     }
 
     private static void zoo_1() {
+
+        Dog hau = new Dog();
+        Dog ham = new Dog("Rex",4);
+        Dog hamham = new Dog("Muhtar",2,3);
+
+        Dog.swim();
+        Dog.run();
+        Dog.say();
+        Dog.walk();
+        Dog.wagging();
+
+        Dove glu = new Dove();
+        Dove grr = new Dove("Roko",2);
+        Dove glu_grr = new Dove("Coco",3,1);
+
+        Dove.say();
+        Dove.fly();
+        Dove.walk();
+        Dove.sendMessage();
 
     }
 
