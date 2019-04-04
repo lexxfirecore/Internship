@@ -1,0 +1,24 @@
+Lists and Maps.
+
+1. De creat si de populat un array unidimensional cu date.
+2. De incarcat elementele array-ului intr-o lista. Obiectul "list" va fi de tipul interfata List,
+insa trebuie instatiat cu un subtip care implementeaza aceasta interfata:
+    List<T> list = new ArrayList<>;  // fiecare isi pune tipul definit in varianta
+3. De studiat si de utilizat in cod toate metodele importante ale interfetei List.
+4. De incarcat datele din lista creata intrun obiect "map" de tipul interfata Map instantiat cu un subtip.
+    Map<Integer, String> map = new HashMap<>;  // fiecare isi pune tipul definit in varianta
+5. De studiat si de utilizat in cod toate metodele importante ale interfetei Map.
+6. De explicat in scris destinatia si diferentele
+intre toate tipurile de implementari List si Map.
+
+Varianta 1: List<String>: ArrayList, Map<Integer, String>: TreeMap
+Varianta 2: List<Long>: LinkedList, Map<Integer, Long>: HashTable
+Varianta 3: List<Double>: Vector, Map<Integer, Double>: HashMap
+
+Bonus:
+    Set<String>: HashSet, Set: TreeSet
+    List<Clasa>: Stack, Map<Clasa>: Properties,
+        type: Obiecte de tipul unei clase proprii "Clasa" (numele la alegere).
+
+https://www.tutorialspoint.com/java/java_collections.htm
+https://www3.ntu.edu.sg/home/ehchua/programming/java/J5c_Collection.html
