@@ -1,5 +1,10 @@
 package com.internship;
 
+import com.internship.zoo.Cat;
+import com.internship.zoo.Dog;
+import com.internship.zoo.Dolphin;
+import com.internship.zoo.Dove;
+
 import java.util.Scanner;
 
 /**
@@ -19,9 +24,59 @@ public class Zoo {
 
     private static void zoo_1() {
 
+        Dog hau = new Dog();
+        Dog ham = new Dog("Rex",4);
+        Dog hamham = new Dog("Muhtar",2,3);
+
+        Dog.swim();
+        Dog.run();
+        Dog.say();
+        Dog.walk();
+        Dog.wagging();
+
+        Dove glu = new Dove();
+        Dove grr = new Dove("Roko",2);
+        Dove glu_grr = new Dove("Coco",3,1);
+
+        Dove.say();
+        Dove.fly();
+        Dove.walk();
+        Dove.sendMessage();
+
     }
 
     private static void zoo_2() {
+        Dolphin dolfi = new Dolphin();
+        Dolphin dolf = new Dolphin("Dulcea",5);
+        Dolphin dodo = new Dolphin("Kobo",4,3);
+
+        Dolphin.jump();
+        Dolphin.say();
+        Dolphin.swim();
+
+        Cat mur = new Cat();
+
+        Cat meau = new Cat("Monea",4);
+        meau.setAge(5);
+        meau.setHeight(15);
+        //TODO: Toate fieldurile
+
+        System.out.println(mur.getName() + " "+ mur.getAge() );
+        // aici se imprima toate fieldurile intrun singur rind
+
+
+        Cat murmur = new Cat("Murca",2,3);
+
+        mur.purr();
+        meau.run();
+//        get
+//        Cat.walk();
+       mur.walk();
+
+       // inca ceva
+
+
+
 
     }
 

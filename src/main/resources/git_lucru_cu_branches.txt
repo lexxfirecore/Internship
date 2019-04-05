@@ -1,0 +1,18 @@
+Lucru cu branch si cum unim mai multe commituri in unu.
+ne asiguram ca suntem pe branch master si facem:
+VCS->git->fetch
+VCS->git->pull
+VCS->update project
+Apoi selectam branchiul nostru si facem ->Chek out(se lasa cu aceeas
+denumire), si se creeaza branch local.
+trecem la log si ne uitam sa fie toate "flajoacele" ce inseamna ca noi
+ suntem pe branchiul dat.
+Acum facem VCS->git->pull si VCS->update project de pe branchiu nostru
+si vedem daca cineva nu a modificat ceva in el.
+In Log mergem la commitul precedent de pe master(ultimu corect ("dorit"))
+ si alegem
+Reset Current Branch to Here...->Mixed(alegem din variantele care sunt)->reset.
+In local changes apar acele 2(sau mai multe) commituri.
+Ne mutam inapoi pe branch master si facem pull si update project.
+apoi apasam Defoult Changelist->commit (facem un commit) si push.
+

@@ -18,7 +18,8 @@ public class StringBuilders {
         System.out.println(StringBuilders.class.getName() + ": ");
         menu();
 
-        //test
+        //test MARGO
+
     }
 
     private static void varianta1() {
