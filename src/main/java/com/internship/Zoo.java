@@ -34,13 +34,26 @@ public class Zoo {
         Dolphin.swim();
 
         Cat mur = new Cat();
+
         Cat meau = new Cat("Monea",4);
+        meau.setAge(5);
+        meau.setHeight(15);
+        //TODO: Toate fieldurile
+
+        System.out.println(mur.getName() + " "+ mur.getAge() );
+        // aici se imprima toate fieldurile intrun singur rind
+
+
         Cat murmur = new Cat("Murca",2,3);
 
-        Cat.purr();
-        Cat.run();
-        Cat.say();
-        Cat.walk();
+        mur.purr();
+        meau.run();
+//        get
+//        Cat.walk();
+       mur.walk();
+
+       // inca ceva
+
 
 
 

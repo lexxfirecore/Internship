@@ -1,5 +1,8 @@
 package com.internship.zoo;
 
+/**
+ * Created by Margarita on 04-Apr-19.
+ */
 public class Dolphin {
     private String name= "Swit";
     private int age= 5;
