@@ -1,6 +1,8 @@
 package com.internship.zoo;
 
-import java.sql.SQLOutput;
+/**
+ * Created by Margarita on 04-Apr-19.
+ */
 
 public class Cat {
     private String name= "Murca";
@@ -65,16 +67,16 @@ public class Cat {
     public void setMouseCatcher(boolean mouseCatcher) {
         this.mouseCatcher = mouseCatcher;
     }
-    public static void say(){
+    public void say(){
         System.out.println("Pisica spune: Meaw");
     }
-    public static void walk(){
+    public void walk(){
         System.out.println("Pesicile se plimba cand vor si pe unde vor!!!");
     }
-    public static void run(){
+    public void run(){
         System.out.println("Pisicele fug repede la mincare si de la ciini)");
     }
-    public static void purr (){
+    public void purr (){
         System.out.println("Pisica toarce de placere");
     }
 }
