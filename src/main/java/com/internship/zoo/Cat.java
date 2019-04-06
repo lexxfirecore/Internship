@@ -11,21 +11,18 @@ public class Cat {
     private float weight=2;
     private boolean mouseCatcher=true;
 
-    public Cat() {
-        System.out.println("Pisica a fost creata!");
+    public Cat(){
     }
 
     public Cat(String name, int age) {
         this.name = name;
         this.age = age;
-        System.out.println("Name: "+name+", Age: "+age);
     }
 
     public Cat(String name, int age, float weight) {
         this.name = name;
         this.age = age;
         this.weight = weight;
-        System.out.println("Name: "+name+", Age: "+age+", Weight: "+weight);
     }
 
     public String getName() {

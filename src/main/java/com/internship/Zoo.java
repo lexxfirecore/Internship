@@ -26,21 +26,22 @@ public class Zoo {
 
     private static void zoo_2() {
         Dolphin dolfi = new Dolphin();
+        System.out.println(dolfi.getName()+" "+dolfi.getAge()+" "+dolfi.getHeight()+" "+dolfi.getWeight()+" "+dolfi.getIntellegence());
         Dolphin dolf = new Dolphin("Dulcea",5);
         Dolphin dodo = new Dolphin("Kobo",4,3);
+        System.out.println(dodo.getName()+" "+dodo.getAge()+" "+dodo.getHeight()+" "+dodo.getWeight()+" "+dodo.getIntellegence());
 
-        Dolphin.jump();
-        Dolphin.say();
-        Dolphin.swim();
+        dolfi.jump();
+        dolfi.say();
+        dolfi.swim();
 
         Cat mur = new Cat();
 
         Cat meau = new Cat("Monea",4);
         meau.setAge(5);
         meau.setHeight(15);
-        //TODO: Toate fieldurile
 
-        System.out.println(mur.getName() + " "+ mur.getAge() );
+        System.out.println(mur.getName() + " "+ mur.getAge()+" "+ mur.getHeight()+" "+ mur.getWeight() +" "+ mur.isMouseCatcher());
         // aici se imprima toate fieldurile intrun singur rind
 
 
@@ -48,11 +49,9 @@ public class Zoo {
 
         mur.purr();
         meau.run();
-//        get
-//        Cat.walk();
        mur.walk();
+       mur.say();
 
-       // inca ceva
 
 
 
