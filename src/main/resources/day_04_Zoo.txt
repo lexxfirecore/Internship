@@ -1,7 +1,7 @@
 Clase.
 De creat clasele conform schemei day_04_clase.png in package zoo.
 De creat fieldurile si metodele conform schemei, metodele printeaza un text specific actiunii animalului.
-In clasa Menagerie de creat cite 3 obiecte pentru fiecare clasa din varianta si de printat continutul.
+In clasa Zoo de creat cite 3 obiecte pentru fiecare clasa din varianta si de printat continutul.
 
 Clasa trebuie sa aiba structura clasica cu fieldurile private,
 constructor null, constructor de baza (voi alegeti care fielduri de pus),
