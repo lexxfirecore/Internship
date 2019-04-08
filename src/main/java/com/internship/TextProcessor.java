@@ -3,25 +3,25 @@ package com.internship;
 import java.util.Scanner;
 
 /**
- * Created by lexx on 03-Apr-19.
+ * Created by lexx on 08-Apr-19.
  */
-public class Lists {
+public class TextProcessor {
     public static void main(String[] args) {
-        System.out.println(Lists.class.getName() + ": ");
+        System.out.println(TextProcessor.class.getName() + ": ");
 
         menu();
 
     }
 
-    private static void lists_1() {
+    private static void textProcessor_1() {
 
     }
 
-    private static void lists_2() {
+    private static void textProcessor_2() {
 
     }
 
-    private static void lists_3() {
+    private static void textProcessor_3() {
 
     }
 
@@ -33,13 +33,13 @@ public class Lists {
             varianta = scanner.nextInt();
             switch (varianta) {
                 case 1:
-                    lists_1();
+                    textProcessor_1();
                     break;
                 case 2:
-                    lists_2();
+                    textProcessor_2();
                     break;
                 case 3:
-                    lists_3();
+                    textProcessor_3();
                     break;
                 case 0:
                     System.out.println("Exit.");

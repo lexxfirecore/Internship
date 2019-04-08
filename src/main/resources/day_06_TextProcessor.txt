@@ -1,0 +1,18 @@
+Text Processor.
+
+Creati un text din mai multe propozitii care contine si numere si procesati:
+
+Varianta 1:
+De numarat de cite ori apare vocalele 'a' si 'e'.
+De schimbat un cuvint cu altul, ambele introduse de la tastatura.
+
+Varianta 2:
+De calculat numarul total de aparitii a semnelor de punctuatie.
+De cautat numarul de aparitii a unui cuvint introdus de la tastatura.
+
+Varianta 3:
+De numarat numarul de aparitii a literelor majuscule si a numerelor.
+De inlocuit un cuvint introdus de la tastatura cu inversul lui.
+
+Bonus:
+Verificati daca textul este formatat corect: propozitia incepe cu litera mare si termina cu punct si spatiu.
