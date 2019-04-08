@@ -26,35 +26,64 @@ public class Zoo {
 
     private static void zoo_2() {
         Dolphin dolfi = new Dolphin();
-        Dolphin dolf = new Dolphin("Dulcea",5);
-        Dolphin dodo = new Dolphin("Kobo",4,3);
+        dolfi.setName("yoyo");
+        dolfi.setAge(5);
+        dolfi.setHeight(2);
+        dolfi.setWeight(30.4f);
+        dolfi.setIntellegence(50);
+        printDolphin(dolfi);
+        dolfi.jump();
+        dolfi.say();
+        dolfi.swim();
 
-        Dolphin.jump();
-        Dolphin.say();
-        Dolphin.swim();
+        Dolphin dolf = new Dolphin("Dulcea", 5);
+        dolf.setHeight(3);
+        dolf.setWeight(29.5f);
+        dolf.setIntellegence(60);
+        printDolphin(dolf);
+        dolf.jump();
+        dolf.say();
+        dolf.swim();
+
+        Dolphin dodo = new Dolphin("Kobo", 4, 3);
+        dodo.setWeight(35f);
+        dodo.setIntellegence(45);
+        printDolphin(dodo);
+        dodo.jump();
+        dodo.say();
+        dodo.swim();
+
 
         Cat mur = new Cat();
-
-        Cat meau = new Cat("Monea",4);
-        meau.setAge(5);
-        meau.setHeight(15);
-        //TODO: Toate fieldurile
-
-        System.out.println(mur.getName() + " "+ mur.getAge() );
-        // aici se imprima toate fieldurile intrun singur rind
-
-
-        Cat murmur = new Cat("Murca",2,3);
-
+        mur.setName("Casandra");
+        mur.setAge(2);
+        mur.setHeight(1);
+        mur.setWeight(3.4f);
+        mur.setMouseCatcher(true);
+        printCat(mur);
         mur.purr();
+        mur.run();
+        mur.walk();
+        mur.say();
+
+        Cat meau = new Cat("Monea", 4);
+        meau.setHeight(1);
+        meau.setWeight(4f);
+        meau.setMouseCatcher(true);
+        printCat(meau);
+        meau.purr();
         meau.run();
-//        get
-//        Cat.walk();
-       mur.walk();
+        meau.walk();
+        meau.say();
 
-       // inca ceva
-
-
+        Cat murmur = new Cat("Murca", 2, 3);
+        murmur.setHeight(1);
+        murmur.setMouseCatcher(true);
+        printCat(murmur);
+        murmur.purr();
+        murmur.run();
+        murmur.walk();
+        murmur.say();
 
 
     }
@@ -85,5 +114,12 @@ public class Zoo {
         } while (varianta != 0);
     }
 
+    private static void printCat(Cat c) {
+        System.out.println("\nCat: Name: " + c.getName() + " ,Age: " + c.getAge() + " ,Height: " + c.getHeight() + " ,Weight: " + c.getWeight() + " ,MouseCatcher: " + c.isMouseCatcher());
+    }
+
+    private static void printDolphin(Dolphin d) {
+        System.out.println("\nDolphin: Name: " + d.getName() + " ,Age: " + d.getAge() + " ,Height: " + d.getHeight() + " ,Weight: " + d.getWeight() + " ,Intellegence: " + d.getIntellegence());
+    }
 
 }
