@@ -5,27 +5,36 @@ package com.internship.zoo;
  */
 
 public class Cat {
-    private String name= "Murca";
-    private int age= 1;
-    private int height = 1;
-    private float weight=2;
-    private boolean mouseCatcher=true;
+    private String name;
+    private int age;
+    private int height;
+    private float weight;
+    private boolean mouseCatcher;
 
-    public Cat() {
-        System.out.println("Pisica a fost creata!");
+    public Cat(){
     }
 
     public Cat(String name, int age) {
         this.name = name;
         this.age = age;
-        System.out.println("Name: "+name+", Age: "+age);
     }
 
     public Cat(String name, int age, float weight) {
-        this.name = name;
-        this.age = age;
+        this(name, age);
         this.weight = weight;
-        System.out.println("Name: "+name+", Age: "+age+", Weight: "+weight);
+    }
+
+    public void say(){
+        System.out.println("Pisica spune: Meaw");
+    }
+    public void walk(){
+        System.out.println("Pesicile se plimba cand vor si pe unde vor!!!");
+    }
+    public void run(){
+        System.out.println("Pisicele fug repede la mincare si de la ciini)");
+    }
+    public void purr (){
+        System.out.println("Pisica toarce de placere");
     }
 
     public String getName() {
@@ -66,17 +75,5 @@ public class Cat {
 
     public void setMouseCatcher(boolean mouseCatcher) {
         this.mouseCatcher = mouseCatcher;
-    }
-    public void say(){
-        System.out.println("Pisica spune: Meaw");
-    }
-    public void walk(){
-        System.out.println("Pesicile se plimba cand vor si pe unde vor!!!");
-    }
-    public void run(){
-        System.out.println("Pisicele fug repede la mincare si de la ciini)");
-    }
-    public void purr (){
-        System.out.println("Pisica toarce de placere");
     }
 }
