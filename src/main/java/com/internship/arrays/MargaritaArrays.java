@@ -1,4 +1,4 @@
-package com.internship.margaritaq;
+package com.internship.arrays;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by margarita on 02-Apr-19.
  */
-public class ExempluArray {
+public class MargaritaArrays {
     public static int getMin(int[] a) {
         int min = a[0];
         for (int i = 0; i < a.length; i++) {
