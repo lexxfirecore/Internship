@@ -17,9 +17,6 @@ public class StringBuilders {
     public static void main(String[] args) {
         System.out.println(StringBuilders.class.getName() + ": ");
         menu();
-
-        //test MARGO
-
     }
 
     private static void varianta1() {
@@ -106,7 +103,7 @@ public class StringBuilders {
         Scanner scanner = new Scanner(System.in);
         int varianta;
         do {
-            System.out.println("Introduceti varianta 1-4, sau 0 pentru a iesi din program: ");
+            System.out.println("\nIntroduceti varianta 1-4, sau 0 pentru a iesi din program: ");
             varianta = scanner.nextInt();
             switch (varianta) {
                 case 1:
