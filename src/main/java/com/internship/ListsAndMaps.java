@@ -5,9 +5,9 @@ import java.util.Scanner;
 /**
  * Created by lexx on 03-Apr-19.
  */
-public class Lists {
+public class ListsAndMaps {
     public static void main(String[] args) {
-        System.out.println(Lists.class.getName() + ": ");
+        System.out.println(ListsAndMaps.class.getName() + ": ");
 
         menu();
 

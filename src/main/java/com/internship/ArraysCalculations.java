@@ -1,6 +1,6 @@
 package com.internship;
 
-import com.internship.margaritaq.ExempluArray;
+import com.internship.arrays.MargaritaArrays;
 
 /**
  * Created by lexx on 02-Apr-19.
@@ -23,7 +23,7 @@ public class ArraysCalculations {
     private static void arr_varianta_2() {
         System.out.println("Varianta 2: Margarita.");
 
-        ExempluArray.main();
+        MargaritaArrays.main();
 
     }
 

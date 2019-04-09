@@ -1,14 +1,21 @@
-Clase.
+Clase - scriti codul in clasa Zoo, adaugati clasele voastre in package zoo,
+scriti codul cu obiectele claselor fiecare in metoda cu varianta lui.
+
 De creat clasele conform schemei day_04_clase.png in package zoo.
-De creat fieldurile si metodele conform schemei, metodele printeaza un text specific actiunii
- animalului.
-In clasa Menagerie de creat cite 3 obiecte pentru fiecare clasa din varianta si de printat
-continutul.
+De creat fieldurile si metodele conform schemei,
+metodele printeaza un text specific actiunii animalului.
 
 Clasa trebuie sa aiba structura clasica cu fieldurile private,
-constructor null, constructor de baza (voi alegeti care fielduri de pus),
-si geteri cu seteri.
+constructor null si doi constructori, singuri decideti parametrii,
+si geteri cu seteri. Orientativa dupa modelul clasei zoo/Pet.
 
+De creat 3 obiecte pentru fiecare clasa din varianta si de printat continutul.
+1 obiect se creaza cu constructorul null si toate fieldurile se seteaza cu seterii.
+2 si 3 obiect se creaza cu ceilalti 2 constructori iar restul fieldurilor se seteaza prin setteri.
+
+Printarea se face prin apelarea geterilor.
+
+Vedeti varianta fiecaruia conform instructiunii din variantele.txt
 Varianta 1: Dog, Dove
 Varianta 2: Cat, Dolphin
 Varianta 3: Duck, Crab

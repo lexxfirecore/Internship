@@ -1,9 +1,11 @@
-Arrays.
+Arrays - codul se scrie itro clasa noua in package arrays,
+si se cheama din clasa ArraysCalculations, fiecare in metoda cu varianta lui
 
 De facut un array unidimensional mai numit si vector,
 de introdus numarul de elemente de la tastatura (se poate de folosit clasa Scanner)
 de populat elementele tabloului cu numere negative si pozitive utilizind clasa Random.
 
+Vedeti varianta fiecaruia conform instructiunii din variantele.txt
 Varianta_1: calculeaza suma, produsul, media aritmetica si calculeaza formula:
 produs * suma / media
 

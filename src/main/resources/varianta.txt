@@ -1,0 +1,3 @@
+Rulati clasa InternshipUtils sa vedeti fiecare ce varianta aveti.
+Scriti un comentariu la inceptul metodei, cui apartine metoda
+Faceti un print la inceputul metodei la ce varianta voi si cui apartine.

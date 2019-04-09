@@ -1,19 +1,28 @@
-Pasul 1:
-Descarca si adauga la proiect libraria apache-commons, o cauti pe net in forma de jar.
+String Utils - codul se scrie in clasa ApacheStringUtils, fiecare in metoda cu varianta lui
+
+Pasul 1 - Incarcarea unei librarii externe in Idea si utilizarea claselor din ea:
+Descarca libraria apache-commons, o cauti pe net in forma de jar. Adauga libraria la proiectu tau Idea.
 Tutorial aici: https://www.youtube.com/watch?v=QAJ09o3Xl_0
 
 Importeaza clasa StringUtils din libraria apache commons-lang si utilizeaza metodele ei in codul tau.
 Scrie un program care foloseste metode din clasa StringUtils
 
+Vezi varianta fiecaruia conform instructiunii din variantele.txt
 Varianta 1: Contains, SubstringBefore, IsNumeric, Trim
 Varianta 2: IsEmpty, startsWith, Reverse, Capitalize
 Varianta 3: IndexOf, Rotate si SubstringAfter, IsBlank
 
 Bonus: Alte metode din: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html.
 
-Pasul 2:
-Sterge libraria din proiect si adauga libraria in maven ca dependency.
+Pasul 2 - Incarcarea unei librarii externe cu ajutorul Maven:
+Sterge libraria adaugata din proiect Idea si vezi ca clasa StringUtils nu mai poate fi importata.
+Desigur ca codul deja nu se compileaza.
 
-Importeaza apache-commons-lang cu ajutorul lui Maven si asigurate ca codul lucreaza exact ca in pasul 1.
+Adauga libraria apache commons-lang in fisierul in pom.xml ca dependency.
+Libraria si dependenta o gasiti pe site Maven Central mvnrepository.com
+Importeaza apache-commons-lang cu ajutorul lui Maven
+si asigurate StringUtils s-a importat corect si codul lucreaza exact ca in pasul 1.
+
+tutoriale:
 https://youtu.be/pt3uB0sd5kY
 https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
