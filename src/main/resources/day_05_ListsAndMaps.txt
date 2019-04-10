@@ -1,5 +1,6 @@
 Lists and Maps - codul se scrie in clasa ListsAndMaps.java - in metoda cu numarul variantei
 
+Partea 1:
 1. De creat si de populat un array unidimensional cu date si de printat.
 2. De incarcat elementele array-ului intr-o lista.
 Obiectul "list" va fi de tipul interfata List,
@@ -20,10 +21,21 @@ Varianta 1: List<String>: ArrayList, Map<Integer, String>: TreeMap
 Varianta 2: List<Long>: LinkedList, Map<Integer, Long>: HashTable
 Varianta 3: List<Double>: Vector, Map<Integer, Double>: HashMap
 
-Varianta Pentru Toti:
-    Set<String>: HashSet, Set: TreeSet
-    List<Clasa>: Stack, Map<Clasa>: Properties,
-        type: Obiecte de tipul unei clase proprii "Clasa" (numele la alegere).
+Partea 2:
+1. De creat o lista ArrayList si de populat cu obiecte de tip de o clasa creata de voi <T>,
+unde <T> este tipul clasei voastre. De printat lista.
+2. De incarcat elementele listei intr-un Set<T> cum implementarea HashSet<T>;
+    Set<T> set = new HashSet<>;
+3. De utilizat in cod 5 cele mai importante medode de la Set.
+4. De printat setul.
+5. De iterat setul si din fiecare obiect de extras doua fielduri,
+de transformat fieldurile in string (daca este cazul) si de incarcat intrun map de tip Properties
+    Properties properties = new Properties();
+6. De utilizat in cod 5 cele mai importante medode de la Properties.
+7. De printat properties.
 
-https://www.tutorialspoint.com/java/java_collections.htm
+
+Vezi documentatia:
 https://www3.ntu.edu.sg/home/ehchua/programming/java/J5c_Collection.html
+https://www.tutorialspoint.com/java/java_collections.htm
+https://www.tutorialspoint.com/java/java_properties_class.htm
