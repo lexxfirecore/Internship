@@ -17,7 +17,49 @@ public class ListsAndMaps {
     }
 
     private static void lists_1() {
+/**
+ * Created by vmarian on 09-Apr-19.
+ */
+        System.out.println("Creat de VMarian");
+        String[] date = {"11", "12", "13", "14", "15"};
 
+        System.out.println("Array unidimensional: " + Arrays.toString(date));
+        ArrayList<String> number = new ArrayList<String>();
+        for (int i = 0; i < date.length; i++) {
+            number.add(date[i]);
+        }
+
+        System.out.println("Array list: " + number);
+
+        number.add("2");
+        System.out.println("Adaugarea unei valori: " + number);
+
+        number.clone();
+        System.out.println("Clonarea:" + number);
+
+        number.remove("12");
+        System.out.println("Stergerea cifrei 12:" + number);
+
+        number.iterator();
+        System.out.println("Iterarea: " + number);
+
+        Map<Integer, String> map = new TreeMap();
+        for (int i = 0; i < date.length; i++) {
+            map.put(i, date[i]);
+        }
+
+        System.out.println("Printam mapa: " + map);
+
+        map.put(6, (String) "17");
+        map.put(9, (String) "19");
+        System.out.println("Folosim put: " + map);
+
+        System.out.println("Folosim get: " + map.get(8));
+
+        System.out.println("Folosim keySet: " + map.keySet());
+        /*
+        La teorie si partea a 2 revin dupa ce creez clasele la zoo
+         */
     }
 
     private static void lists_2() {
@@ -116,18 +158,18 @@ public class ListsAndMaps {
         set.addAll(cats);
         System.out.println("Metoda clear: ");
         set2.clear();
-        System.out.println("Setul contine: "+ set2);
+        System.out.println("Setul contine: " + set2);
 
 
         Properties prop = new Properties();
         System.out.println("\nProperties contine: ");
-        for (int i = 0; i <set.size() ; i++) {
-            prop.setProperty(cats.get(i).getName(),String.valueOf(cats.get(i).getAge()) );
+        for (int i = 0; i < set.size(); i++) {
+            prop.setProperty(cats.get(i).getName(), String.valueOf(cats.get(i).getAge()));
         }
         System.out.println(prop);
-        System.out.println("Metoda getProperties: "+prop.getProperty("Maleavca"));
-        System.out.println("Metoda propertyNames: "+prop.propertyNames( ));
-        System.out.println("Metoda setProperty: "+prop.setProperty("Casandra", "1"));
+        System.out.println("Metoda getProperties: " + prop.getProperty("Maleavca"));
+        System.out.println("Metoda propertyNames: " + prop.propertyNames());
+        System.out.println("Metoda setProperty: " + prop.setProperty("Casandra", "1"));
         System.out.println("Metoda list: ");
         PrintWriter writer = new PrintWriter(System.out);
         prop.list(writer);
