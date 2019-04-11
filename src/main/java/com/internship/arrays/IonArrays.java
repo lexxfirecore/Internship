@@ -17,7 +17,8 @@ public class IonArrays {
 
         System.out.println("Input from keyboard the needed amount of array elements and press enter");
 
-        int[] arr = new int[sc.nextInt()];
+   //     int[] arr = {0,-1,1};
+      int[] arr = new int[sc.nextInt()];
 
         System.out.println("Declared length of arr = " + arr.length);
         System.out.print("Elements of original array = ");
@@ -41,15 +42,20 @@ public class IonArrays {
         }
 
         System.out.print("\nSum of absolute values = ");
-        System.out.print(Math.abs(sumOfArrayElem(pozNumbersArr(arr)))
+        System.out.println(Math.abs(sumOfArrayElem(pozNumbersArr(arr)))
                 + Math.abs(sumOfArrayElem(negNumberArr(arr))));
 
         //Bonus 1
-        System.out.print("\nProduct of positive numbers = " + prodOfArrayElem(pozNumbersArr(arr)));
-        System.out.print("\nSum of negative numbers = " + sumOfArrayElem(negNumberArr(arr)));
-        System.out.print("\nDivision  of positive numbers product to sum of negative numbers = "
-                           + prodOfArrayElem(pozNumbersArr(arr))/sumOfArrayElem(negNumberArr(arr)));
+        System.out.println("Product of positive numbers = " + prodOfArrayElem(pozNumbersArr(arr)));
+        System.out.println("Sum of negative numbers = " + sumOfArrayElem(negNumberArr(arr)));
 
+        //Validator for cheaking division by 0
+        if(sumOfArrayElem(negNumberArr(arr)) == 0){
+            System.out.println("Unfortunately division by zero isn't allowed");
+        }else {
+            System.out.println("Modulo  of positive numbers product and sum of negative numbers = "
+                    + prodOfArrayElem(pozNumbersArr(arr)) % sumOfArrayElem(negNumberArr(arr)));
+        }
 
     }
 
@@ -58,18 +64,18 @@ public class IonArrays {
         return start + rand.nextInt(end - start+1);
     }
 
-
+    // 0 has been assigned to positive numbers -  i dont know if that is correct
     public static int[] pozNumbersArr(int[] arr){
         int counter = 0;
         for(int i = 0; i<arr.length; i++){
-            if(arr[i] > 0){
+            if(arr[i] >= 0){
                 counter++;
             }
         }
         int index = 0;
         int[] arrPozNum = new int[counter];
         for(int i = 0 ; i < arr.length; i++){
-            if(arr[i] > 0){
+            if(arr[i] >= 0){
                 arrPozNum[index] = arr[i];
                 index++;
             }
