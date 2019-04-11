@@ -2,6 +2,9 @@ package com.internship;
 
 import com.internship.zoo.Cat;
 import com.internship.zoo.Dolphin;
+import com.internship.zoo.Duck;
+import com.internship.zoo.Crab;
+
 
 import java.util.Scanner;
 
@@ -83,7 +86,41 @@ public class Zoo {
     }
 
     private static void zoo_3() {
+        Duck mcDuk =  new Duck();
+        mcDuk.setName("McDuk");
+        mcDuk.setAge(2);
+        mcDuk.setHeight(10);
+        mcDuk.setWeight(21.0f);
+        mcDuk.setWild(false);
+        mcDuk.printDuck();
 
+
+        Duck mcCuk = new Duck("McCuc", 2);
+        mcCuk.setHeight(10);
+        mcCuk.setWeight(25.0f);
+        mcCuk.setWild(true);
+        mcCuk.printDuck();
+
+
+        Duck mcCook = new Duck("McCook", 3, 10, 20.0f, true);
+        mcCook.printDuck();
+
+        Crab lobster = new Crab();
+        lobster.setName("Lobster");
+        lobster.setAge(2);
+        lobster.setHeight(25);
+        lobster.setWeight(40.0f);
+        lobster.setShell("MegaPegaStrong");
+        lobster.printCrab();
+
+        Crab iobster = new Crab("Iobster", 3);
+        iobster.setHeight(40);
+        iobster.setWeight(41.0f);
+        iobster.setShell("OmegaStrong");
+        iobster.printCrab();
+
+        Crab ibaster = new Crab("Ibaster", 2, 10, 21.0f, "UltraMegaStrong");
+        ibaster.printCrab();
     }
 
     private static void menu() {
