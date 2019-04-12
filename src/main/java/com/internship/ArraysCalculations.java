@@ -1,5 +1,6 @@
 package com.internship;
 
+import com.internship.arrays.IonArrays;
 import com.internship.arrays.MargaritaArrays;
 
 /**
@@ -28,7 +29,9 @@ public class ArraysCalculations {
     }
 
     private static void arr_varianta_3() {
+        System.out.println("Varianta 3: Ion.");
 
+       IonArrays.main();
     }
 
     private static void arr_varianta_4() {
