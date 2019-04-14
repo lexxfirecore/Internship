@@ -4,6 +4,9 @@ import com.internship.zoo.Dog;
 import com.internship.zoo.Cat;
 import com.internship.zoo.Dolphin;
 import com.internship.zoo.Dove;
+import com.internship.zoo.Duck;
+import com.internship.zoo.Crab;
+
 
 import java.util.Scanner;
 
@@ -108,7 +111,41 @@ public class Zoo {
     }
 
     private static void zoo_3() {
+        Duck mcDuk =  new Duck();
+        mcDuk.setName("McDuk");
+        mcDuk.setAge(2);
+        mcDuk.setHeight(10);
+        mcDuk.setWeight(21.0f);
+        mcDuk.setWild(false);
+        printDuck(mcDuk);
 
+
+        Duck mcCuk = new Duck("McCuc", 2);
+        mcCuk.setHeight(10);
+        mcCuk.setWeight(25.0f);
+        mcCuk.setWild(true);
+        printDuck(mcCuk);
+
+
+        Duck mcCook = new Duck("McCook", 3, 10, 20.0f, true);
+        printDuck(mcCook);
+
+        Crab lobster = new Crab();
+        lobster.setName("Lobster");
+        lobster.setAge(2);
+        lobster.setHeight(25);
+        lobster.setWeight(40.0f);
+        lobster.setShell("MegaPegaStrong");
+        printCrab(lobster);
+
+        Crab iobster = new Crab("Iobster", 3);
+        iobster.setHeight(40);
+        iobster.setWeight(41.0f);
+        iobster.setShell("OmegaStrong");
+        printCrab(iobster);
+
+        Crab ibaster = new Crab("Ibaster", 2, 10, 21.0f, "UltraMegaStrong");
+        printCrab(ibaster);
     }
 
     private static void menu() {
@@ -152,6 +189,34 @@ public class Zoo {
 
     private static void printDolphin(Dolphin d) {
         System.out.println("\nDolphin: Name: " + d.getName() + " ,Age: " + d.getAge() + " ,Height: " + d.getHeight() + " ,Weight: " + d.getWeight() + " ,Intellegence: " + d.getIntellegence());
+    }
+
+    public static void printDuck(Duck duck){
+        System.out.println(duck.getClass().getSimpleName() + " name is " + duck.getName());
+        System.out.print(duck.getName() + " is " + duck.getAge() + " years old ");
+        System.out.print("and has " + duck.getWeight() + " kg, " );
+        System.out.println("it height is " + duck.getHeight() + " cm");
+        System.out.println(duck.getName() + " is wild? - " + duck.isWild());
+        duck.say();
+        duck.walk();
+        duck.swim();
+        duck.migrate();
+        duck.fly();
+        System.out.println();
+}
+
+
+    public static void printCrab(Crab crab) {
+        System.out.println(crab.getClass().getSimpleName() + " name is " + crab.getName());
+        System.out.print(crab.getName() + " is " + crab.getAge() + " years old ");
+        System.out.print("and has " + crab.getWeight() + " kg, ");
+        System.out.println("it height is " + crab.getHeight() + " cm");
+        System.out.println(crab.getName() + " has " + crab.getShell() + " shell");
+        crab.say();
+        crab.walk();
+        crab.swim();
+        crab.hide();
+        System.out.println();
     }
 
 }
