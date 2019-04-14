@@ -1,7 +1,9 @@
 package com.internship;
 
+import com.internship.zoo.Dog;
 import com.internship.zoo.Cat;
 import com.internship.zoo.Dolphin;
+import com.internship.zoo.Dove;
 
 import java.util.Scanner;
 
@@ -15,7 +17,30 @@ public class Zoo {
     }
 
     private static void zoo_1() {
+        Dog dog = new Dog();
+        dog.setName("Rex");
+        dog.setAge(2);
+        dog.setHeight(35);
+        dog.setWeight(4.2f);
+        dog.setTrained(true);
+        printDog(dog);
+        dog.say();
+        dog.swim();
+        dog.run();
+        dog.walk();
+        dog.wagging();
 
+        Dove dove = new Dove();
+        dove.setName("Cipi");
+        dove.setAge(1);
+        dove.setHeight(11);
+        dove.setWeight(1.2f);
+        dove.setPostman(true);
+        printDove(dove);
+        dove.say();
+        dove.fly();
+        dove.walk();
+        dove.sendMessage();
     }
 
     private static void zoo_2() {
@@ -109,6 +134,16 @@ public class Zoo {
                     System.out.println("Nu exista asa varianta!");
             }
         } while (varianta != 0);
+    }
+
+    private static void printDog(Dog dog) {
+        System.out.println("\nNume: " + dog.getName() + ", Age: " + dog.getAge() + ", Height: " + dog.getHeight()+ ", Weight: " + dog.getWeight() + ", Trained: " + dog.isTrained());
+
+    }
+
+    private static void printDove(Dove dove) {
+        System.out.println("\nNume: " + dove.getName() + ", Age: " + dove.getAge() + ", Height: " + dove.getHeight()+ ", Weight: " + dove.getWeight() + ", Trained: " + dove.isPostman());
+
     }
 
     private static void printCat(Cat c) {
