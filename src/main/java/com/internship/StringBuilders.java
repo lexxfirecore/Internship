@@ -90,7 +90,48 @@ public class StringBuilders {
     }
 
     private static void varianta3() {
-        // TODO: insert your name and code here
+        /*
+          What  means immutable?
+            Immutable it means that an object once created cannot be modified
+            and will be constant all time while is used. For example immutable classes don't have setters and they are full incapsulated.
+            Immutability performs thread-safe. that means if an object is used or shared in multi-threading processes will be protected against the alteration
+            and some conflicts during performed threads processes.
+
+          What  means mutable?
+             Mutable means opposite of immutable. The object once created can be modified. Setters are allowed. Is not thread-safe.
+
+          Why String is not recommended to be used?
+             String during the using it methods produces lots of garbage that overload memory.
+             That is the reason for using StringBuilder and StringBuffer that provide methods for String manipulation.
+
+          What differences are between:
+          String            StringBuilder                  StringBuffer
+          immutable         mutable                        mutable
+          thread-safe       thread-unsafe                  thread-safe
+          synchronized      not synchronized               syncronized
+                            more performace                less performace
+                            used in non-multithreading     used in multi-threading
+         */
+        System.out.println("Ion");
+        System.out.println("StrinBuilder example");
+        StringBuilder sb =  new StringBuilder("Pisica");
+        sb.append(" ");
+        sb.append("toarce");
+        System.out.println(sb);
+        sb.insert(7, "Murca");
+        sb.insert(12, " ");
+        System.out.println(sb);
+        sb.delete(0, 12).deleteCharAt(3).deleteCharAt(5).insert(0, "Pisicile");
+        System.out.println(sb);
+
+        System.out.println("StringBuffer example:");
+        StringBuffer stringBuffer = new StringBuffer("a avea");
+        stringBuffer.delete(0, 1).delete(2, 5);
+        System.out.println(stringBuffer);
+        stringBuffer.insert(0, "Eu").append("m");
+        System.out.println(stringBuffer);
+        stringBuffer.replace(0, 2, "Tu").replace(4, 5, "i");
+        System.out.println(stringBuffer);
     }
 
     private static void varianta4() {
