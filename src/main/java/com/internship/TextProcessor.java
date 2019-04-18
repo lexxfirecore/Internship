@@ -18,7 +18,52 @@ public class TextProcessor {
     }
 
     private static void textProcessor_2() {
+        /*
+          Created by Margarita on 18-Apr-19.
+         */
+        System.out.println("Creat de Margarita");
 
+        String txt = "\nMaine merg cu Andu in parc si sa imi iau cu mine: Telefonul," +
+                " Geaca, 50 lei si o sticla cu apa? Da, ar fi bine insa daca va ploua?" +
+                " Trebuie sa imi iau si o umbrela! Dar vom vedea maine. ";
+        System.out.println("Textul este: " + txt);
+
+        // prelucrarea textului pn a numara chite semne de punctuatie contine textul.
+        char[] arayCaractere = txt.toCharArray();
+        int nrDePunctuatii = 0;
+        //numaram nr de semne de punctuatie si le scoatem din text
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < arayCaractere.length; i++) {
+            switch (arayCaractere[i]) {
+                case ':':
+                case '.':
+                case ',':
+                case '?':
+                case '!':
+                    nrDePunctuatii = nrDePunctuatii + 1;
+                    break;
+                default:
+                    sb.append(arayCaractere[i]);
+            }
+
+        }
+        System.out.println("Textul fara semne de punctuatie: " + sb);
+        System.out.println("Numarul total de aparitii a semnelor de punctuatie este: " + nrDePunctuatii);
+
+        // prelucram textul pn a numara de cate ori se intilneste in text un cuvint introdus de la tastatura
+        Scanner scanner = new Scanner(System.in);
+        String cuvint;
+        System.out.println("Introduceti va rog cuvintul:");
+        cuvint = scanner.next();
+        String[] textFaraSemneDePunctuatie = sb.toString().split(" ");
+        int nrDeCuvinte = 0;
+        for (String s : textFaraSemneDePunctuatie) {
+
+            if (s.equalsIgnoreCase(cuvint)) {
+                nrDeCuvinte = nrDeCuvinte + 1;
+            }
+        }
+        System.out.println("\nNumarul de aparitii a cuvintului introdus de la tastatura este: " + nrDeCuvinte);
     }
 
     private static void textProcessor_3() {
