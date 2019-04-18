@@ -2,6 +2,7 @@ package com.internship;
 
 import com.internship.arrays.IonArrays;
 import com.internship.arrays.MargaritaArrays;
+import com.internship.arrays.VMarianArrays;
 
 /**
  * Created by lexx on 02-Apr-19.
@@ -18,7 +19,8 @@ public class ArraysCalculations {
     }
 
     private static void arr_varianta_1() {
-
+        System.out.println("Varianta 1: VMarian.");
+        VMarianArrays.main();
     }
 
     private static void arr_varianta_2() {
