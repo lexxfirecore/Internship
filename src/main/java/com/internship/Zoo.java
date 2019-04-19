@@ -15,8 +15,9 @@ public class Zoo {
     }
 
     private static void zoo_1() {
-        System.out.println("\nSa creat ciinele.");
         Dog dog = new Dog();
+        if (dog != null)
+            System.out.println("\nSa creat ciinele.");
         dog.setName("Rex");
         dog.setAge(2);
         dog.setHeight(35);
@@ -40,7 +41,7 @@ public class Zoo {
         dogs.walk();
         dogs.wagging();
 
-        Dog dogg = new Dog("Laika", 1, 24, 2.7f,true);
+        Dog dogg = new Dog("Laika", 1, 24, 2.7f, true);
         printDog(dogg);
         dogg.say();
         dogg.swim();
@@ -48,8 +49,9 @@ public class Zoo {
         dogg.walk();
         dogg.wagging();
 
-        System.out.println("\nSa creat porumbelul.");
         Dove dove = new Dove();
+        if (dove != null)
+            System.out.println("\nSa creat porumbelul.");
         dove.setName("Cipi");
         dove.setAge(1);
         dove.setHeight(11);
@@ -144,7 +146,7 @@ public class Zoo {
     }
 
     private static void zoo_3() {
-        Duck mcDuk =  new Duck();
+        Duck mcDuk = new Duck();
         mcDuk.setName("McDuk");
         mcDuk.setAge(2);
         mcDuk.setHeight(10);
@@ -205,17 +207,19 @@ public class Zoo {
             }
         } while (varianta != 0);
     }
+
     private static void printDog(Dog dog) {
-        System.out.println("\nNume: " + dog.getName() + ", Age: " + dog.getAge() + ", Height: " + dog.getHeight()+
+        System.out.println("\nNume: " + dog.getName() + ", Age: " + dog.getAge() + ", Height: " + dog.getHeight() +
                 ", Weight: " + dog.getWeight() + ", Trained: " + dog.isTrained());
 
     }
 
     private static void printDove(Dove dove) {
-        System.out.println("\nNume: " + dove.getName() + ", Age: " + dove.getAge() + ", Height: " + dove.getHeight()+
+        System.out.println("\nNume: " + dove.getName() + ", Age: " + dove.getAge() + ", Height: " + dove.getHeight() +
                 ", Weight: " + dove.getWeight() + ", Postman: " + dove.isPostman());
 
     }
+
     private static void printCat(Cat c) {
         System.out.println("\nCat: Name: " + c.getName() + " ,Age: " + c.getAge() + " ,Height: " + c.getHeight() + " ,Weight: " + c.getWeight() + " ,MouseCatcher: " + c.isMouseCatcher());
     }
@@ -224,10 +228,10 @@ public class Zoo {
         System.out.println("\nDolphin: Name: " + d.getName() + " ,Age: " + d.getAge() + " ,Height: " + d.getHeight() + " ,Weight: " + d.getWeight() + " ,Intellegence: " + d.getIntellegence());
     }
 
-    public static void printDuck(Duck duck){
+    public static void printDuck(Duck duck) {
         System.out.println(duck.getClass().getSimpleName() + " name is " + duck.getName());
         System.out.print(duck.getName() + " is " + duck.getAge() + " years old ");
-        System.out.print("and has " + duck.getWeight() + " kg, " );
+        System.out.print("and has " + duck.getWeight() + " kg, ");
         System.out.println("it height is " + duck.getHeight() + " cm");
         System.out.println(duck.getName() + " is wild? - " + duck.isWild());
         duck.say();
@@ -236,7 +240,7 @@ public class Zoo {
         duck.migrate();
         duck.fly();
         System.out.println();
-}
+    }
 
 
     public static void printCrab(Crab crab) {
