@@ -14,62 +14,63 @@ public class VMarianArrays {
     public static void main() {
         System.out.println("introduceti dimensiunea vectorului:");
         Scanner scan = new Scanner(System.in);
-        double[] number = new double[scan.nextInt()];
-        System.out.println("Lungimea array-ului : " + number.length);
+        int[] vector = new int[scan.nextInt()];
+        int vectorLength = vector.length;
+        System.out.println("Lungimea array-ului : " + vectorLength);
         System.out.print("Elementele array-ului : ");
 
-        for (int i = 0; i < number.length; i++) {
-            number[i] = getrandom(-3, 3);
-            System.out.print(number[i] + " ");
-        }
+        printVector(vector);
 
-        System.out.println("\nSuma este = " + suma(number));
+        int suma = suma(vector);
+        System.out.println("\nSuma este = " + suma);
 
-        System.out.println("Produsul este = " + produs(number));
+        int produs = produs(vector);
+        System.out.println("Produsul este = " + produs);
 
-        System.out.println("Media aritmetica este = " + mediaa(number));
+        double media = media(suma, vectorLength);
+        System.out.println("Media aritmetica este = " + media);
 
-        if (mediaa(number) == 0) {
-            System.out.println("Din păcate, divizarea prin zero nu este permisă");
+        if (media != 0) {
+            double expresie = calcExpresie(suma, produs, media);
+            System.out.println("Rezultatul formulei (produs * suma / media) este = " + expresie);
         } else {
-            System.out.println("Rezultatul formulei (produs * suma / media) este = " + calcExpresie(number));
+            System.out.println("Media este 0, expresia nu poate fi calculata.");
         }
     }
 
-    private static int getrandom(int startarray, int endarray) {
+    private static void printVector(int[] vector) {
+        for (int i = 0; i < vector.length; i++) {
+            vector[i] = generateRandom(-1, 1);
+            System.out.print(vector[i] + " ");
+        }
+    }
+
+    private static int generateRandom(int startarray, int endarray) {
         Random random = new Random();
         return startarray + random.nextInt(endarray - startarray + 1);
     }
 
-    public static int suma(double[] number) {
+    public static int suma(int[] vector) {
         int suma = 0;
-        for (int i = 0; i < number.length; i++) {
-            suma += number[i];
+        for (int i = 0; i < vector.length; i++) {
+            suma += vector[i];
         }
         return suma;
     }
 
-    public static int produs(double[] number) {
+    public static int produs(int[] vector) {
         int produs = 1;
-        for (int i = 0; i < number.length; i++) {
-            produs *= number[i];
+        for (int i = 0; i < vector.length; i++) {
+            produs *= vector[i];
         }
         return produs;
     }
 
-    public static double mediaa(double[] number) {
-        double mediaa = 0;
-        for (double i = 0; i < number.length; i++) {
-            mediaa = suma(number) / number.length;
-        }
-        return mediaa;
+    public static double media(int suma, int vectorLength) {
+        return (double) suma / vectorLength;
     }
 
-    public static double calcExpresie(double[] number) {
-        int suma = suma(number);
-        int produs = produs(number);
-        double mediaa = mediaa(number);
-        double rezultat = (produs(number) * suma(number)) / mediaa(number);
-        return rezultat;
+    public static double calcExpresie(int suma, int produs, double media) {
+        return produs * suma / media;
     }
 }
