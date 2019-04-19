@@ -1,26 +1,32 @@
 package com.internship.zoo;
+
 /**
  * Created by vmarian on 11-Apr-19.
  */
 public class Dove {
+
     private String name;
     private int age;
     private int height;
     private float weight;
     private boolean postman;
-    public Dove(){
+
+    public Dove() {
     }
-    public Dove(String name, int age){
+
+    public Dove(String name, int age) {
         this.name = name;
         this.age = age;
     }
+
     public Dove(String name, int age, int height, float weight, boolean postman) {
         this(name, age);
         this.height = height;
         this.weight = weight;
         this.postman = postman;
     }
-    public static void say(){
+
+    public static void say() {
         System.out.println("Porumbelu cinta: glu-glu");
     }
 
@@ -36,6 +42,7 @@ public class Dove {
         System.out.println("Din timpuri au fost postasi.");
     }
 
+
     public String getName() {
         return name;
     }
@@ -49,7 +56,6 @@ public class Dove {
     }
 
     public void setAge(int age) {
-
         this.age = age;
     }
 
@@ -62,12 +68,10 @@ public class Dove {
     }
 
     public float getWeight() {
-
         return weight;
     }
 
     public void setWeight(float weight) {
-
         this.weight = weight;
     }
 
