@@ -1,55 +1,51 @@
 package com.internship.zoo;
 
 /**
- * Created by Ion on 14-Apr-19.
+ * Created by vmarian on 11-Apr-19.
  */
-public class Crab {
+public class Dog {
 
     private String name;
     private int age;
     private int height;
     private float weight;
-    private String shell;
+    private boolean trained;
 
-    public Crab() {
+    public Dog() {
     }
 
-    public Crab(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Dog(String name, int age) {
+        this.setName(name);
+        this.setAge(age);
     }
 
-    public Crab(String name, int age, int height, float weight, String shell) {
+    public Dog(String name, int age, int height, float weight, boolean trained) {
         this(name, age);
         this.height = height;
         this.weight = weight;
-        this.shell = shell;
+        this.trained = trained;
     }
 
     public void say() {
-        System.out.println(this.name + " say Craaaaaaa");
-    }
-
-    public void hide() {
-        System.out.println(this.name + " is hiding");
+        System.out.println("Ciinele latra Hau Hau");
     }
 
     public void walk() {
-        System.out.println(this.name + " is walking");
+        System.out.println("Ciinele se plimba in parc");
     }
 
     public void swim() {
-        System.out.println(this.name + " is swiming");
+        System.out.println("Ciinele stie a inota");
     }
 
-
-    public String getShell() {
-        return shell;
+    public void run() {
+        System.out.println("Ciinele fuge dupa pisici");
     }
 
-    public void setShell(String shell) {
-        this.shell = shell;
+    public void wagging() {
+        System.out.println("Ciinele da din coada");
     }
+
 
     public String getName() {
         return name;
@@ -83,4 +79,11 @@ public class Crab {
         this.weight = weight;
     }
 
+    public boolean isTrained() {
+        return trained;
+    }
+
+    public void setTrained(boolean trained) {
+        this.trained = trained;
+    }
 }

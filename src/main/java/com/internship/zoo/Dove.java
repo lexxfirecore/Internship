@@ -1,55 +1,47 @@
 package com.internship.zoo;
 
 /**
- * Created by Ion on 14-Apr-19.
+ * Created by vmarian on 11-Apr-19.
  */
-public class Crab {
+public class Dove {
 
     private String name;
     private int age;
     private int height;
     private float weight;
-    private String shell;
+    private boolean postman;
 
-    public Crab() {
+    public Dove() {
     }
 
-    public Crab(String name, int age) {
+    public Dove(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public Crab(String name, int age, int height, float weight, String shell) {
+    public Dove(String name, int age, int height, float weight, boolean postman) {
         this(name, age);
         this.height = height;
         this.weight = weight;
-        this.shell = shell;
+        this.postman = postman;
     }
 
-    public void say() {
-        System.out.println(this.name + " say Craaaaaaa");
+    public static void say() {
+        System.out.println("Porumbelu cinta: glu-glu");
     }
 
-    public void hide() {
-        System.out.println(this.name + " is hiding");
+    public static void walk() {
+        System.out.println("Plimbari in parc");
     }
 
-    public void walk() {
-        System.out.println(this.name + " is walking");
+    public static void fly() {
+        System.out.println("Zboara la o inaltime de 900 metri.");
     }
 
-    public void swim() {
-        System.out.println(this.name + " is swiming");
+    public static void sendMessage() {
+        System.out.println("Din timpuri au fost postasi.");
     }
 
-
-    public String getShell() {
-        return shell;
-    }
-
-    public void setShell(String shell) {
-        this.shell = shell;
-    }
 
     public String getName() {
         return name;
@@ -83,4 +75,11 @@ public class Crab {
         this.weight = weight;
     }
 
+    public boolean isPostman() {
+        return postman;
+    }
+
+    public void setPostman(boolean postman) {
+        this.postman = postman;
+    }
 }

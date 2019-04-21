@@ -1,9 +1,6 @@
 package com.internship;
 
-import com.internship.zoo.Cat;
-import com.internship.zoo.Dolphin;
-import com.internship.zoo.Duck;
-import com.internship.zoo.Crab;
+import com.internship.zoo.*;
 
 
 import java.util.Scanner;
@@ -18,7 +15,70 @@ public class Zoo {
     }
 
     private static void zoo_1() {
+        Dog dog = new Dog();
+        if (dog != null)
+            System.out.println("\nSa creat ciinele.");
+        dog.setName("Rex");
+        dog.setAge(2);
+        dog.setHeight(35);
+        dog.setWeight(4.2f);
+        dog.setTrained(true);
+        printDog(dog);
+        dog.say();
+        dog.swim();
+        dog.run();
+        dog.walk();
+        dog.wagging();
 
+        Dog dogs = new Dog("Muhtar", 3);
+        dogs.setHeight(44);
+        dogs.setWeight(5.1f);
+        dogs.setTrained(true);
+        printDog(dogs);
+        dogs.say();
+        dogs.swim();
+        dogs.run();
+        dogs.walk();
+        dogs.wagging();
+
+        Dog dogg = new Dog("Laika", 1, 24, 2.7f, true);
+        printDog(dogg);
+        dogg.say();
+        dogg.swim();
+        dogg.run();
+        dogg.walk();
+        dogg.wagging();
+
+        Dove dove = new Dove();
+        if (dove != null)
+            System.out.println("\nSa creat porumbelul.");
+        dove.setName("Cipi");
+        dove.setAge(1);
+        dove.setHeight(11);
+        dove.setWeight(1.2f);
+        dove.setPostman(true);
+        printDove(dove);
+        dove.say();
+        dove.fly();
+        dove.walk();
+        dove.sendMessage();
+
+        Dove dowe = new Dove("Shinji King", 2);
+        dowe.setHeight(15);
+        dowe.setWeight(1.2f);
+        dowe.setPostman(true);
+        printDove(dowe);
+        dowe.say();
+        dowe.fly();
+        dowe.walk();
+        dowe.sendMessage();
+
+        Dove dov = new Dove("Coada Alba", 1, 11, 1.1f, true);
+        printDove(dov);
+        dov.say();
+        dov.fly();
+        dov.walk();
+        dov.sendMessage();
     }
 
     private static void zoo_2() {
@@ -86,7 +146,7 @@ public class Zoo {
     }
 
     private static void zoo_3() {
-        Duck mcDuk =  new Duck();
+        Duck mcDuk = new Duck();
         mcDuk.setName("McDuk");
         mcDuk.setAge(2);
         mcDuk.setHeight(10);
@@ -148,6 +208,18 @@ public class Zoo {
         } while (varianta != 0);
     }
 
+    private static void printDog(Dog dog) {
+        System.out.println("\nNume: " + dog.getName() + ", Age: " + dog.getAge() + ", Height: " + dog.getHeight() +
+                ", Weight: " + dog.getWeight() + ", Trained: " + dog.isTrained());
+
+    }
+
+    private static void printDove(Dove dove) {
+        System.out.println("\nNume: " + dove.getName() + ", Age: " + dove.getAge() + ", Height: " + dove.getHeight() +
+                ", Weight: " + dove.getWeight() + ", Postman: " + dove.isPostman());
+
+    }
+
     private static void printCat(Cat c) {
         System.out.println("\nCat: Name: " + c.getName() + " ,Age: " + c.getAge() + " ,Height: " + c.getHeight() + " ,Weight: " + c.getWeight() + " ,MouseCatcher: " + c.isMouseCatcher());
     }
@@ -156,10 +228,10 @@ public class Zoo {
         System.out.println("\nDolphin: Name: " + d.getName() + " ,Age: " + d.getAge() + " ,Height: " + d.getHeight() + " ,Weight: " + d.getWeight() + " ,Intellegence: " + d.getIntellegence());
     }
 
-    public static void printDuck(Duck duck){
+    public static void printDuck(Duck duck) {
         System.out.println(duck.getClass().getSimpleName() + " name is " + duck.getName());
         System.out.print(duck.getName() + " is " + duck.getAge() + " years old ");
-        System.out.print("and has " + duck.getWeight() + " kg, " );
+        System.out.print("and has " + duck.getWeight() + " kg, ");
         System.out.println("it height is " + duck.getHeight() + " cm");
         System.out.println(duck.getName() + " is wild? - " + duck.isWild());
         duck.say();
@@ -168,7 +240,7 @@ public class Zoo {
         duck.migrate();
         duck.fly();
         System.out.println();
-}
+    }
 
 
     public static void printCrab(Crab crab) {

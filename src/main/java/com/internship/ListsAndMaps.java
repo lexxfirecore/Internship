@@ -1,8 +1,11 @@
 package com.internship;
 
 import com.internship.zoo.Cat;
+import com.internship.zoo.Duck;
 
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Reader;
 import java.util.*;
 
 /**
@@ -161,6 +164,113 @@ care nu permite cheia sau valorile null, cu metode vechi.
     }
 
     private static void lists_3() {
+        /*
+        Created by Ion Ghincolov 14/04/2019
+         */
+        System.out.println("Varianta 3 : Ion");
+        System.out.println("*************");
+        System.out.println("Part 1");
+
+
+
+        double[] doubleNums = {23.56, 23123.342, -23452354.342342, -3432.44324, 324.43242};
+
+        List<Double> doubleList = new Vector<>();
+
+        for(int i = 0; i<doubleNums.length; i++){
+            doubleList.add(doubleNums[i]);
+        }
+
+        System.out.println("Print list : " + doubleList);
+        System.out.println("The List size is : " +doubleList.size());
+        double d = 23.56;
+        System.out.println("The List contains " + d + " : " + doubleList.contains(d));
+        doubleList.set(2, 2344234.0);
+        System.out.println("Element on index position 2 was changed : " + doubleList);
+        System.out.println("Print element on position 2 : " + doubleList.get(2));
+        doubleList.remove(4);
+        System.out.println("Element on position 4 has been removed : " + doubleList);
+
+
+
+        Map<Integer, Double> doubleMap = new HashMap<>();
+        for (Double i : doubleList) {
+            doubleMap.put(doubleList.indexOf(i), i);
+        }
+
+        System.out.println("Map elements : " + doubleMap);
+        System.out.println("Entry set of map : " + doubleMap.entrySet());
+        System.out.println("Key set of map : " + doubleMap.keySet());
+        System.out.println("Map is empty : " + doubleMap.isEmpty());
+        System.out.println(doubleMap.hashCode());
+
+        /*
+          List<E> - insert, access is performed by  position of the elements in the list. List may contain duplicate elements.
+          ArrayList<E> - Resizable-array implementation of the List interface. Implements all optional list operations, and permits all elements, including null.
+                         Provides methods to manipulate the size of the array that is used internally to store the list. It is unsynchronized.
+                         Offers constant-time positional access and is fast.
+          LinkedList<E> - Operations that index into the list will traverse the list from the beginning or the end,
+                          whichever is closer to the specified index. Performance is affected.
+          Vector<E> -     Grow or shrink size as needed to accommodate adding and removing items after the Vector has been created.
+
+
+
+          Map<K, V> - An object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value.
+          HashMap<K, V> - Permits null values and the null key. It is unsynchronize. This class makes no guarantees as to the order of the map; in particular,
+                          it does not guarantee that the order will remain constant over time.
+          TreeMap<K, V> - Is sorted according to the natural ordering of its keys, or by a Comparator provided at map creation time, depending on which constructor is used.
+          LinkedHashMap<K, V> - This implementation differs from HashMap in that it maintains a doubly-linked list running through all of its entries.
+         */
+
+        System.out.println("******************");
+        System.out.println("Part 2");
+        System.out.println();
+
+        List<Duck> ducks =  new ArrayList<>();
+
+            ducks.add(new Duck("McDuk", 3, 10, 20.0f, true));
+            ducks.add(new Duck("McCook", 4, 12, 35.0f, false));
+            ducks.add(new Duck("McCuk", 5, 9, 25.0f, true));
+
+
+         for(Duck duck : ducks) {
+             System.out.println(duck.getClass().getSimpleName() + " " +
+                     "name is " + duck.getName() + ", " +
+                     "age : " + duck.getAge() + ", " +
+                     "height :  " + duck.getHeight() + ", " +
+                     "weight : " + duck.getWeight() + ", " +
+                     "is wild? : " + duck.isWild());
+         }
+
+         Set<Duck> duckSet = new HashSet<>();
+         for (Duck duck : ducks){
+             duckSet.add(duck);
+         }
+
+        System.out.println("The size of set : "  + duckSet.size());
+        System.out.println("The set contain all elements of ducks list : " + duckSet.containsAll(ducks));
+        duckSet.clear();
+        System.out.println("Set is empty : " + duckSet.isEmpty());
+        duckSet.addAll(ducks);
+        for(Duck duck : duckSet) {
+            System.out.println(duck.getClass().getSimpleName() + " " +
+                    "name is " + duck.getName() + ", " +
+                    "age : " + duck.getAge() + ", " +
+                    "height :  " + duck.getHeight() + ", " +
+                    "weight : " + duck.getWeight() + ", " +
+                    "is wild? : " + duck.isWild());
+        }
+
+        Properties properties = new Properties();
+        for(Duck duck : duckSet){
+            properties.setProperty(duck.getName(), String.valueOf(duck.getAge()));
+        }
+        System.out.println(properties);
+        System.out.println("Property of McDuk : "+ properties.getProperty("McDuk"));
+        System.out.println(properties.get("McCuk"));
+        properties.replace("McCuk", 5);
+        properties.setProperty("Maki", "4");
+        System.out.println(properties);
 
     }
 

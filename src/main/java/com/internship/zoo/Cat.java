@@ -3,15 +3,15 @@ package com.internship.zoo;
 /**
  * Created by Margarita on 04-Apr-19.
  */
-
 public class Cat {
+
     private String name;
     private int age;
     private int height;
     private float weight;
     private boolean mouseCatcher;
 
-    public Cat(){
+    public Cat() {
     }
 
     public Cat(String name, int age) {
@@ -24,18 +24,22 @@ public class Cat {
         this.weight = weight;
     }
 
-    public void say(){
+    public void say() {
         System.out.println("Pisica spune: Meaw");
     }
-    public void walk(){
+
+    public void walk() {
         System.out.println("Pesicile se plimba cand vor si pe unde vor!!!");
     }
-    public void run(){
+
+    public void run() {
         System.out.println("Pisicele fug repede la mincare si de la ciini)");
     }
-    public void purr (){
+
+    public void purr() {
         System.out.println("Pisica toarce de placere");
     }
+
 
     public String getName() {
         return name;

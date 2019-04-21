@@ -6,6 +6,7 @@
     <groupId>com.internship</groupId>
     <artifactId>Internship</artifactId>
     <version>1.0-SNAPSHOT</version>
+
 <dependencies>
     <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
     <dependency>
@@ -25,6 +26,7 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+
             </plugin>
         </plugins>
     </build>
