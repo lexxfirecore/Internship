@@ -1,14 +1,11 @@
 package com.internship;
 
 import com.internship.zoo.Cat;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by lexx on 02-Apr-19.
  */
-
-import org.apache.commons.lang3.StringUtils;
-
 public class ApacheStringUtils {
     public static void main(String[] args) {
         System.out.println(ApacheStringUtils.class.getName() + ": ");
