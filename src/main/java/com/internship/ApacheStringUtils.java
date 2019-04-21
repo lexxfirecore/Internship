@@ -1,5 +1,8 @@
 package com.internship;
 
+import com.internship.zoo.Cat;
+import org.apache.commons.lang.StringUtils;
+
 /**
  * Created by lexx on 02-Apr-19.
  */
@@ -12,6 +15,7 @@ public class ApacheStringUtils {
 
         isEmptyExample();
         startsWithExample();
+        margaritaq();
 
         //added by Ion - 20/04/19
         indexOfExample();
@@ -26,10 +30,28 @@ public class ApacheStringUtils {
         // TODO: insert your code here
     }
 
+
     private static void startsWithExample() {
         // TODO: insert your code here
     }
 
+
+    private static void margaritaq() {
+        /*
+          Created by Margarita on 16-Apr-19.
+         */
+        Cat cat = new Cat();
+        Cat cat1 = new Cat("Monea", 2);
+        String name = cat.getName();
+        String name1 = cat1.getName();
+
+
+        System.out.println("Metoda isEmpty: " + StringUtils.isEmpty(name));
+        System.out.println("Metoda startsWith: " + StringUtils.startsWith(name, "C"));
+        System.out.println("Metoda Reverse: " + StringUtils.reverse(name1));
+        System.out.println("Metoda Capitalize: " + StringUtils.capitalize(name1));
+    }
+  
     // Created by Ion
     private static void indexOfExample(){
         System.out.println("indexOf() method example by Ion");
@@ -60,7 +82,6 @@ public class ApacheStringUtils {
         String s = "isBlank?";
         System.out.println("Original string : " + s);
         System.out.println( s + " : " + StringUtils.isBlank(s));
-
     }
 
 }
