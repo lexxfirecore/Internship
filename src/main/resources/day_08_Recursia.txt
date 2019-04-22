@@ -1,0 +1,16 @@
+Recursia.
+
+De creat functia de calcul a factorialui prin metoda recursiei.
+
+Factorialul:    n! = n! * (n-1) * (n-2) * ... * 3 * 2 * 1
+                5! = 5 * 4 * 3 * 2 * 1
+
+Factorialul se foloseste in calculul problemelor de combinatorica: permutari, aranjamente si combinari.
+Folosind metoda de calcul a factorialului, de rezolvat problema de combinatorica:
+
+1. Intrun set sunt 6 pahare colorate diferit. La o masa stau N oaspeti.
+In cite moduri unice este posibila repartizarea a cite un pahar la fiecare oaspete?
+
+2. Avind o colectie de N piese in player, in cite moduri diferite pot fi reprodse piesele?
+
+3. La o serbare, N persoane și-au dat mâna. Câte strângeri de mâna au avut loc în total?
