@@ -12,6 +12,10 @@ public class ApacheStringUtils {
 
         isEmptyExample();
         startsWithExample();
+        contains();
+        StringBefore();
+        isNumeric();
+        Trim();
         margaritaq();
 
         //added by Ion - 20/04/19
@@ -32,6 +36,34 @@ public class ApacheStringUtils {
         // TODO: insert your code here
     }
 
+    /*
+              Created by vmarian on 22-Apr-19.
+             */
+    public static void contains() {
+        System.out.println("contains()");
+        String expresie = "Vrei, nu vrei, bea Gheorghe aghiasma.";
+        System.out.println("Stringul initial este : " + expresie);
+        System.out.println("Metoda contains \"Vrei, nu vrei\" : " + expresie.contains("Vrei, nu vrei"));
+        System.out.println("Metoda contains \"Coniac\" : " + expresie.contains("Coniac"));
+    }
+
+    public static void StringBefore() {
+        System.out.println("Metoda StringBefore()");
+        System.out.println("Stringul initial este: " + "This is my string.");
+        System.out.println("Metoda StringBefore \"my\" : " + StringUtils.substringBefore("This is my string", "my"));/** rezultatul este: This is*/
+        System.out.println("Metoda StringBefore \"string\" : " + StringUtils.substringBefore("This is my string", "string"));/** rezultatul este: This is my*/
+    }
+
+    public static void isNumeric() {
+        System.out.println("Metoda isNumeric()");
+        System.out.println("Metoda isNumeric 123456789: " + StringUtils.isNumeric("123456789"));
+        System.out.println("Metoda isNumeric abv: " + StringUtils.isNumeric("abv"));
+    }
+
+    public static void Trim() {
+        System.out.println("Metoda Trim: Stringul initial este: \"   trim in java  \"");
+        System.out.println( ".." + StringUtils.trim ("   trim in java  ") + "..");
+    }
 
     private static void margaritaq() {
         /*
@@ -48,37 +80,40 @@ public class ApacheStringUtils {
         System.out.println("Metoda Reverse: " + StringUtils.reverse(name1));
         System.out.println("Metoda Capitalize: " + StringUtils.capitalize(name1));
     }
-  
+
     // Created by Ion
-    private static void indexOfExample(){
+    private static void indexOfExample() {
         System.out.println("indexOf() method example by Ion");
-            String s = "IndexOf";
+        String s = "IndexOf";
         System.out.println("Index of 'n' in " + s + " : " + StringUtils.indexOf(s, 'n'));
     }
+
     // Created by Ion
-    private static void rotateExample(){
+    private static void rotateExample() {
         System.out.println("rotate() method example by Ion");
         String s = "Rotate";
         System.out.println("Original string : " + s);
-        System.out.println( s + " : " + StringUtils.rotate(s, 3));
+        System.out.println(s + " : " + StringUtils.rotate(s, 3));
         System.out.println("Original string : " + s);
-        System.out.println( s + " : " + StringUtils.rotate(s, 5));
+        System.out.println(s + " : " + StringUtils.rotate(s, 5));
     }
+
     // Created by Ion
-    private static void substringAfterExample(){
+    private static void substringAfterExample() {
         System.out.println("substringAfter() method example by Ion");
         String s = "substringAfter";
         System.out.println("Original string : " + s);
-        System.out.println( s + " : " + StringUtils.substring(s, 3));
+        System.out.println(s + " : " + StringUtils.substring(s, 3));
         System.out.println("Original string : " + s);
-        System.out.println( s + " : " + StringUtils.substring(s, 3, 9));
+        System.out.println(s + " : " + StringUtils.substring(s, 3, 9));
     }
+
     // Created by Ion
-    private static void isBlankExample(){
+    private static void isBlankExample() {
         System.out.println("isBlankExample() method example by Ion");
         String s = "isBlank?";
         System.out.println("Original string : " + s);
-        System.out.println( s + " : " + StringUtils.isBlank(s));
+        System.out.println(s + " : " + StringUtils.isBlank(s));
     }
 
 }
