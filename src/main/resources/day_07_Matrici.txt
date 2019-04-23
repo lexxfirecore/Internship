@@ -16,7 +16,7 @@ De calculat:
 Varianta 1: Suma elementelor de pe diagonala principala
             impartita la elementul minim din matrice.
 
-Varianta 2: Suma maximului de pe diagonalei principala,
+Varianta 2: Suma elementelor de pe diagonala principala,
             impartit la media aritmetica a diagonalei secundare.
 
 Varianta 3: De calculat media aritmetica a elementelor deasupra diagonalei secundare inclusiv.
