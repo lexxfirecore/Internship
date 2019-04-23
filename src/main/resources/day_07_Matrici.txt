@@ -1,0 +1,24 @@
+Matrici.
+
+1 2 3 4 5
+6 7 1 8 2
+4 8 9 1 0
+7 1 5 1 2
+3 0 7 6 3
+
+diagonala principala : 1 7 9 1 3
+diagonala secundara :  3 1 9 8 5
+
+De creat o matricie bidemensionala patrata. Marimea se citeste de la tastatura iar elementele se genereaza
+De printat elementele matricei si elementele diagonalelor principale si cea secundare.
+
+De calculat:
+Varianta 1: Suma elementelor de pe diagonala principala
+            impartita la elementul minim din matrice.
+
+Varianta 2: Suma maximului de pe diagonalei principala,
+            impartit la media aritmetica a diagonalei secundare.
+
+Varianta 3: De calculat media aritmetica a elementelor deasupra diagonalei secundare inclusiv.
+
+Bonus: De calculat suma elementelor in afara elementelor de pe diagonale.
