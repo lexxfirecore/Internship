@@ -1,5 +1,7 @@
 package com.internship;
 
+import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -83,6 +85,105 @@ public class Matrix {
 
 
     private static void matrix_3() {
+         /*
+          Created by Ion on 23-Apr-19.
+         */
+        System.out.println("Created by Ion");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input number of columns and rows in matrix");
+        int x = scanner.nextInt();
+        int[][] matrix = new int[x][x];
+
+        //Add elements to matrix
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = getRandom(0, 1);
+            }
+        }
+
+        //Print matrix
+        System.out.println("Matrix elements : ");
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.println();
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+        }
+
+        // Primary diagonal elements
+        System.out.print("\nPrimary diagonal elements : ");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (i == j) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+            }
+        }
+
+        // Secondary diagonal elements
+        System.out.print("\nSecondary diagonal elements : ");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = matrix[i].length - 1; j >= 0; j--) {
+                if (matrix.length - i - 1 == j) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+            }
+        }
+
+        //Average value of top secondary diagonals elements
+        int count = 0;
+        int sumTopSecondDiagonalsElements = 0;
+        for (int k = 0; k < matrix.length; k++) {
+            for (int i = 0; i < matrix.length - k; i++) {
+                for (int j = matrix[i].length - k - 1; j >= 0; j--) {
+                    if (matrix.length - i - k - 1 == j) {
+                        sumTopSecondDiagonalsElements = sumTopSecondDiagonalsElements + matrix[i][j];
+                        count++;
+                    }
+                }
+            }
+        }
+        System.out.println("\nAverage value of top secondary diagonals elements : " + (double) sumTopSecondDiagonalsElements / count);
+
+        //Bonus**************
+        int sumElem = 0;
+        int sumPrimary = 0;
+        int sumSecondary = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            //Summ of all matrix elements
+            for (int j = 0; j < matrix[i].length; j++) {
+                sumElem = sumElem + matrix[i][j];
+            }
+            //Summ of primary diagonal elements
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (i == j) {
+                    sumPrimary = sumPrimary + matrix[i][j];
+                }
+
+            }
+            //Summ of secondary diagonal elements
+            for (int j = matrix[i].length - 1; j >= 0; j--) {
+                if (matrix.length - i - 1 == j) {
+                    sumSecondary = sumSecondary + matrix[i][j];
+                }
+            }
+        }
+        //Condition for validating odd length of matrix
+        if (matrix.length % 2 != 0) {
+            sumPrimary = sumPrimary - (matrix[matrix.length / 2][matrix.length / 2]);
+        }
+
+        //Tests print out - Not required by task -  They will be deleted after final approve
+        if (matrix.length % 2 != 0) {
+            System.out.println("Test central element : " + matrix[matrix.length / 2][matrix.length / 2]);
+        }
+        System.out.println("Test Summ all elem : " + sumElem);
+        System.out.println("Test Sum primary : " + sumPrimary);
+        System.out.println("Test Summ secondary " + sumSecondary);
+
+        //Main bonus print out
+        System.out.println("Summ of elements out of primary and secondary diagonals : " + (sumElem - (sumPrimary + sumSecondary)));
 
     }
 
@@ -99,6 +200,12 @@ public class Matrix {
     public static double mediaDiagonalei(ArrayList arrayList) {
         double media = (double) sumaDiagonalei(arrayList) / arrayList.size();
         return media;
+    }
+
+    // getRandom() number method added by Ion
+    public static int getRandom(int start, int end) {
+        Random rand = new Random();
+        return start + rand.nextInt(end - start + 1);
     }
 
     private static void menu() {
