@@ -1,0 +1,32 @@
+Menagerie
+
+De creat infrastructura de clase conform schemei day_10_menagerie.png in package menagerie.
+
+Partea 1:
+1. De creat superclasa Animal (SC) cu 3 constructori: null, 2 parametri, 3+ parametri.
+2. De creat interfetele (I): Walking, Running, Swimming si Flying
+3. De create clasele: Dog, Cat, Duck, Dove, Crab, Dolphin (C) care mostenesc Animal (SC)
+si implementeaza interfetele I conform schemei. Clasele C vor avea 2 constructori: null si 2 parametri..
+4. Clasele vor face @Override la metoda toString() din top-clasa Object care se va folosi pentru printarea fiecare field al obiectului.
+
+Partea 2:
+5. De creat 3 obiecte pentru fiecare clasa C, folosind constructori din C si din SC.
+si de adaugat obiectele C intro lista de tip Animal SC.
+6. De iterat lista, de apelat metoda say() si de printat elementele C apelind getterii din Animal;
+7. De iterat lista si de printat elementele C apelind metoda toString();
+9. De creat patru lista de tip interfete I: Walking, Running, Swimming si Flying, si de populat lista cu obiecte C care implementeaza I.
+10. De interat fiecare lista si de chemat metodele din interfetele I.
+
+Varianta 1: Dog, Dove, Fly
+Varianta 2: Cat, Dolphin, Animal, Runner
+Varianta 3: Duck, Crab, Walking, Swimming
+
+Bonus:
+De iterat lista SC si pentru fiecare obiect C de chemate metode si fielduri din C.
+Ideie: Folosteste operatorul binar: instanceof.
+
+Requirements: Programul trebuie sa fie bine organizat, codul organizat pe blocuri, cu comentarii la bloc si cu metode.
+Variabilele si metodele trebuie sa fie in camelCase, sa aiba nume cu sens. Formatati textul de iesire sa fie citet si clar.
+Utilizatorul programului nu cunoaste sarcina programului si nu are acces la codul vostru.
+https://medium.com/oril/10-tips-to-keep-your-code-more-clean-2fa9aafea1cf
+Folositi Code->Reformat Code.
