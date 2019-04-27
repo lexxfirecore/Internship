@@ -1,0 +1,23 @@
+Sorting.
+
+De creat un 3 arrayuri unidimensionale de 100, 1000 si 10000 de elemente.
+Generati elementele lor in diapazonul (-100, 100).
+
+1. Sortati elementele arrayului prin metoda definita in varianta.
+2. Sortati elementele folosind o clasa din jdk sau o biblioteca externa.
+3. Comparati arrayurile sortate obtinute element cu element, verificati si confirmati ca sunt identice.
+4. Masurati timpul de executie a algoritmului pentru fiecare array.
+5. Generati alte 2x3 arrayuri si repetati masurarile (in total 9 masurari). Faceti media din 3 masurari pu 100, 1000 si 10000.
+6. Comparati rezultatele obtinute cu timpurile de sortare din celelalte variante si scriti o concluzie referitoare la vitezele de sortare.
+
+Varianta 1: Metoda Insertion Sort.
+Varianta 2: Metoda Selection Sort.
+Varianta 3: Metoda Bubble Sort.
+
+Bonus: De sortat o matrice printr-o alta metoda la alegere.
+
+
+* Organizati tot functionalul in metode bine definite, optimizati codul si facetil modular si reutilizat.
+* Exemplu de masurare a timpului:  https://stackoverflow.com/questions/180158/how-do-i-time-a-methods-execution-in-java
+* https://www.youtube.com/watch?v=TZRWRjq2CAg
+* https://www.toptal.com/developers/sorting-algorithms
