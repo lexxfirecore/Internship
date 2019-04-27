@@ -23,12 +23,50 @@ public class Recursion {
     }
 
     private static void recursion_2() {
-        
+
     }
 
     private static void recursion_3() {
+        /*
+        Created by Ion 26/04/19
+         */
+        System.out.println("Variant 3 - Ion");
+
+        //Subtask 1
+        int i = 5;
+        if (i < 0) {
+            System.out.println("Invalid number - required positive number");
+        } else
+        System.out.println("!" + i + " = " + factorial(i));
+
+        //Subtask 2
+        int guests = 8;
+        if (guests < 0) {
+            System.out.println("Invalid number - required positive number");
+        } else {
+            System.out.println("Numbers of " + guests + " guests handshakes : " + numOfHandShakes(guests));
+        }
 
     }
+
+    //factorial() by Ion - Subtask 1
+    public static int factorial(int i) {
+        if (i == 0) {
+            return 1;
+        } else {
+            return (i * factorial(i - 1));
+        }
+    }
+
+    //Subtask 2 by Ion
+    public static int numOfHandShakes(int numOfGuests) {
+        if (numOfGuests <= 1) {
+            return 0;
+        } else {
+            return (numOfGuests - 1) + numOfHandShakes(numOfGuests - 1);
+        }
+    }
+
 
     private static void menu() {
         Scanner scanner = new Scanner(System.in);
