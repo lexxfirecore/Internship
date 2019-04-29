@@ -1,9 +1,8 @@
 package com.internship;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
+
+import java.util.*;
 
 /**
  * Created by lexx on 22-Apr-19.
@@ -83,7 +82,146 @@ public class Matrix {
 
 
     private static void matrix_3() {
+         /*
+          Created by Ion on 23-Apr-19.
+         */
+        main();
+    }
 
+    //Main task method - by Ion
+    public static void main() {
+        System.out.println("Variant 3 - Created by Ion");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input an integer number greater than 0 for number of columns and rows in matrix:");
+        int x = 0;
+        //Validator for no integers input
+        try {
+            x = scanner.nextInt();
+            //Validation - out of positiv values range and integer maximum value range
+            if (x <= 0 || x > Integer.MAX_VALUE) {
+                System.out.println("Impossible to create matrix : Input a number greater than 0 and less than " + Integer.MAX_VALUE + ":");
+            } else {
+                int[][] matrix = new int[x][x];
+                addElementsToMatrix(matrix, -10, 10);
+                printMatrixElements(matrix);
+                printPrimaryDiagonalElements(matrix);
+                printSecondaryDiagonalElements(matrix);
+                System.out.println("\nAverage value of top secondary diagonals elements : " + averageValTopSecDiagonalsElements(matrix));
+                //Bonus
+                System.out.println("Summ of elements out of primary and secondary diagonals : " + sumOfOutDiagonalsElements(matrix));
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Impossible to create matrix : Input an integer number greater than 0 and less than " + Integer.MAX_VALUE + ":");
+            return;
+        }
+
+
+    }
+
+    //Add elements to matrix method - by Ion
+    public static void addElementsToMatrix(int matrix[][], int x, int y) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = getRandom(x, y);
+            }
+        }
+    }
+
+    //Print matrix method - by Ion
+    public static void printMatrixElements(int matrix[][]) {
+        System.out.println("Matrix elements : ");
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.println();
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.printf("%4d", matrix[i][j]);
+
+            }
+        }
+    }
+
+    // Print primary diagonal elements method - by Ion
+    public static void printPrimaryDiagonalElements(int matrix[][]) {
+        System.out.print("\nPrimary diagonal elements : ");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (i == j) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+            }
+        }
+    }
+
+    // Print secondary diagonal elements method - by Ion
+    public static void printSecondaryDiagonalElements(int matrix[][]) {
+        System.out.print("\nSecondary diagonal elements : ");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = matrix[i].length - 1; j >= 0; j--) {
+                if (matrix.length - i - 1 == j) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+            }
+        }
+    }
+
+    //Average value of top secondary diagonals elements method - by Ion
+    public static double averageValTopSecDiagonalsElements(int matrix[][]) {
+        int count = 0;
+        int sumTopSecondDiagonalsElements = 0;
+        for (int k = 0; k < matrix.length; k++) {
+            for (int i = 0; i < matrix.length - k; i++) {
+                for (int j = matrix[i].length - k - 1; j >= 0; j--) {
+                    if (matrix.length - i - k - 1 == j) {
+                        sumTopSecondDiagonalsElements = sumTopSecondDiagonalsElements + matrix[i][j];
+                        count++;
+                    }
+                }
+            }
+        }
+        return (double) sumTopSecondDiagonalsElements / count;
+    }
+
+    //Summ of out diagonals elements - by Ion
+    public static int sumOfOutDiagonalsElements(int matrix[][]) {
+        int sumElem = 0;
+        int sumPrimary = 0;
+        int sumSecondary = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            //Summ of all matrix elements
+            for (int j = 0; j < matrix[i].length; j++) {
+                sumElem = sumElem + matrix[i][j];
+            }
+            //Summ of primary diagonal elements
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (i == j) {
+                    sumPrimary = sumPrimary + matrix[i][j];
+                }
+            }
+            //Summ of secondary diagonal elements
+            for (int j = matrix[i].length - 1; j >= 0; j--) {
+                if (matrix.length - i - 1 == j) {
+                    sumSecondary = sumSecondary + matrix[i][j];
+                }
+            }
+        }
+        //Tests print out - Not required by task -  They will be deleted after final approve
+        if (matrix.length % 2 != 0) {
+            System.out.println("Central element of matrix: " + matrix[matrix.length / 2][matrix.length / 2]);
+        }
+        System.out.println("Summ of all elements : " + sumElem);
+        System.out.println("Summ of primary diagonal elements: " + sumPrimary);
+        System.out.println("Summ of secondary diagonal elements: " + sumSecondary);
+
+        //Condition for validating odd length of matrix
+        if (matrix.length % 2 != 0) {
+            sumPrimary = sumPrimary - (matrix[matrix.length / 2][matrix.length / 2]);
+        }
+        return (sumElem - (sumPrimary + sumSecondary));
+    }
+
+    // getRandom() number method - by Ion
+    public static int getRandom(int start, int end) {
+        Random rand = new Random();
+        return start + rand.nextInt(end - start + 1);
     }
 
     //Metodele pn suma si medie create de Margarita
