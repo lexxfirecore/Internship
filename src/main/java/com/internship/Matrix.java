@@ -15,7 +15,56 @@ public class Matrix {
     }
 
     private static void matrix_1() {
+        /*
+          Created by vmarian on 30-Apr-19.
+         */
+        System.out.println("Creat de VMarian");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduceti marimea matricei: ");
+        int rows = scanner.nextInt();
+        int columns = rows;
+        int[][] elemente = new int[rows][columns];
+        Random random = new Random();
+        int maxrind = 5;
+        int minrind = -5;
+        System.out.println("\nElementele Matriciei: ");
+        for (int i = 0; i < elemente.length; i++) {
+            for (int j = 0; j < elemente[i].length; j++) {
+                elemente[i][j] = random.nextInt(maxrind + 1 - minrind) + minrind;
+            }
+        }
+        System.out.println(Arrays.deepToString(elemente).replace("], ", "]\n")
+                .replace("[[", "[").replace("]]", "]"));
 
+        ArrayList<Integer> elementelediagonaleiprincipale = new ArrayList<>();
+        System.out.print("\nDiagonala principala: ");
+        for (int i = 0; i < elemente.length; i++) {
+            for (int j = 0; j < elemente[i].length; j++) {
+                if (i == j) {
+                    System.out.print(elemente[i][j] + "  ");
+                    elementelediagonaleiprincipale.add((elemente[i][j]));
+                }
+            }
+        }
+        ArrayList<Integer> elementelediagonaleisecundare = new ArrayList<>();
+        System.out.print("\nDiagonala secundara: ");
+        for (int i = 0; i < elemente.length; i++) {
+            System.out.print(elemente[elemente.length - i - 1][i] + "  ");
+            elementelediagonaleisecundare.add((elemente[elemente.length - i - 1][i]));
+        }
+
+        int sumaelementelordiagonalei = sumadiagonalei(elementelediagonaleiprincipale);
+        System.out.println("\nSuma diagonalei principale: " + sumaelementelordiagonalei);
+
+        int min = getMin(elemente);
+        System.out.println("Minimul matirciei este: " + min);
+
+        if (min != 0) {
+            double expresie = calcExpresie(sumaelementelordiagonalei, min);
+            System.out.println("Rezultatul formulei (sumaelementelordiagonalei/ min) este = " + expresie);
+        } else {
+            System.out.println("Min este 0, expresia nu poate fi calculata.");
+        }
     }
 
     private static void matrix_2() {
@@ -84,6 +133,30 @@ public class Matrix {
 
     private static void matrix_3() {
 
+    }
+    //Metodele pentru sumaelementelordiagonalei, elementul minim din matirce si expresia create de vmarian.
+    public static int sumadiagonalei(ArrayList arrayList) {
+        int sumaelementelordiagonalei = 0;
+        for (int i = 0; i < arrayList.size(); i++) {
+            sumaelementelordiagonalei = sumaelementelordiagonalei + (int) arrayList.get(i);
+        }
+        return sumaelementelordiagonalei;
+    }
+
+    public static int getMin(int[][] elemente) {
+        int min = elemente [0][0];
+        for (int i = 0; i < elemente.length; i++) {
+            for (int j = 0; j < elemente.length; j++)
+            if (min < elemente[i][j]) {
+            } else {
+
+                min = elemente[i][j];
+            }
+        }
+        return min;
+    }
+    public static double calcExpresie(int sumaelementelordiagonalei, double min) {
+        return sumaelementelordiagonalei / min;
     }
 
     //Metodele pn suma si medie create de Margarita
