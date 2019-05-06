@@ -1,9 +1,8 @@
 package com.internship;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
+
+import java.util.*;
 
 /**
  * Created by lexx on 22-Apr-19.
@@ -132,7 +131,150 @@ public class Matrix {
 
 
     private static void matrix_3() {
+         /*
+          Created by Ion on 23-Apr-19.
+         */
+        main();
+    }
 
+    //Main task method - by Ion
+    public static void main() {
+        System.out.println("Variant 3 - Created by Ion");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input the number of matrix length : ");
+        int x = getValidatedInt(scanner);
+        if (x > 0) {
+            int[][] matrix = createMatrix(new int[x][x], -10, 10);
+            System.out.println("Elements of matrix : "); printArr(matrix);
+            System.out.print("\nElements of primary diagonal elements : "); printArr(primaryDiagonalArr(matrix));
+            System.out.print("\nElements of secondary diagonal elements : "); printArr(secondaryDiagonalArr(matrix));
+            System.out.println("\nAverage value of top secondary diagonals elements : " + averageValTopSecDiagonalsElements(matrix));
+            //Bonus
+            System.out.println("Summ of elements out of primary and secondary diagonals : " + sumOfOutDiagonalsElements(matrix));
+        }
+    }
+
+    //integrated validator method
+    public static int getValidatedInt(Scanner scanner){
+        try {
+          int x = scanner.nextInt();
+            if(x > 0 && x <= Integer.MAX_VALUE){
+                return x;
+            }else {
+                System.out.println("Impossible to create matrix : Input a number greater than 0 and less than " + Integer.MAX_VALUE + ":");
+                return -1;
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Impossible to create matrix : Input a number greater than 0 and less than " + Integer.MAX_VALUE + ":");
+            return -1;
+        }
+    }
+
+
+    //Create matrix matrix method - by Ion
+    public static int[][] createMatrix(int[][] matrix, int x, int y) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = getRandom(x, y);
+            }
+        }
+        return matrix;
+    }
+
+   //2d and 1d arrays print method - by Ion
+    public static void printArr(Object obj){
+        if(obj.getClass().equals(int[][].class)){
+            int[][] matrix = (int[][])obj;
+            for (int i = 0; i < matrix.length; i++) {
+                System.out.println();
+                for (int j = 0; j < matrix[i].length; j++) {
+                    System.out.printf("%4d", matrix[i][j]);
+                }
+            }
+        }
+        else if(obj.getClass().equals(int[].class)){
+            int[] arr = (int[])obj;
+            System.out.print( Arrays.toString(arr));
+        }
+        else{
+            System.out.println("null");
+        }
+    }
+
+    // Primary diagonal array  - by Ion
+    public static int[] primaryDiagonalArr(int[][] matrix) {
+        int[] arr = new int[matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (i == j) {
+                    arr[i] = matrix[i][j];
+                }
+            }
+        }
+        return arr;
+    }
+
+    // Secondary diagonal array - by Ion
+    public static int[] secondaryDiagonalArr(int matrix[][]) {
+        int[] arr = new int[matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = matrix[i].length - 1; j >= 0; j--) {
+                if (matrix.length - i - 1 == j) {
+                    arr[i] = matrix[i][j];
+                }
+            }
+        }
+        return arr;
+    }
+
+    //Average value of top secondary diagonals elements method - by Ion
+    public static double averageValTopSecDiagonalsElements(int matrix[][]) {
+        int count = 0;
+        int sumTopSecondDiagonalsElements = 0;
+        for (int k = 0; k < matrix.length; k++) {
+            for (int i = 0; i < matrix.length - k; i++) {
+                for (int j = matrix[i].length - k - 1; j >= 0; j--) {
+                    if (matrix.length - i - k - 1 == j) {
+                        sumTopSecondDiagonalsElements = sumTopSecondDiagonalsElements + matrix[i][j];
+                        count++;
+                    }
+                }
+            }
+        }
+        return (double) sumTopSecondDiagonalsElements / count;
+    }
+
+    //Summ of out diagonals elements - by Ion
+    public static int sumOfOutDiagonalsElements(int matrix[][]) {
+        int sumElem = 0;
+        int sumPrimary = 0;
+        int sumSecondary = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                sumElem = sumElem + matrix[i][j];
+            }
+            sumPrimary = sumPrimary + primaryDiagonalArr(matrix)[i];
+            sumSecondary = sumSecondary + primaryDiagonalArr(matrix)[i];
+        }
+        //Tests print out - Not required by task -  They will be deleted after final approve
+        if (matrix.length % 2 != 0) {
+            System.out.println("Central element of matrix: " + matrix[matrix.length / 2][matrix.length / 2]);
+        }
+        System.out.println("Summ of all elements : " + sumElem);
+        System.out.println("Summ of primary diagonal elements: " + sumPrimary);
+        System.out.println("Summ of secondary diagonal elements: " + sumSecondary);
+
+        //Condition for validating odd length of matrix
+        if (matrix.length % 2 != 0) {
+            sumPrimary = sumPrimary - (matrix[matrix.length / 2][matrix.length / 2]);
+        }
+        return (sumElem - (sumPrimary + sumSecondary));
+    }
+
+    // getRandom() number method - by Ion
+    public static int getRandom(int start, int end) {
+        Random rand = new Random();
+        return start + rand.nextInt(end - start + 1);
     }
     //Metodele pentru sumaelementelordiagonalei, elementul minim din matirce si expresia create de vmarian.
     public static int sumadiagonalei(ArrayList arrayList) {
