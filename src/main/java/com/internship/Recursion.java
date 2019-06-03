@@ -1,5 +1,6 @@
 package com.internship;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 import com.internship.zoo.Cat;
@@ -23,12 +24,31 @@ public class Recursion {
     }
 
     private static void recursion_2() {
-        
+        //creat de Margarita
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Introduceti numarul de cantece din Player:");
+        int num = scan.nextInt();
+        // formula permutari Pn=n!
+        if(num<0)System.out.println("nu exista factorial din asa numar");
+        else {System.out.println("Modurile in care pot fi reproduse cantecele sunt: "+String.format("%,d",Recursion.factorialHavingLargeResult(num)));
+
+        }
+
     }
 
     private static void recursion_3() {
 
     }
+
+    public static BigInteger factorialHavingLargeResult(int n) {
+        BigInteger result = BigInteger.ONE;
+        for (int i = 2; i <= n; i++)
+            result = result.multiply(BigInteger.valueOf(i));
+        return result;
+    }
+
+
+
 
     private static void menu() {
         Scanner scanner = new Scanner(System.in);
