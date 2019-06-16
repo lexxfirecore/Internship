@@ -1,5 +1,7 @@
 package com.internship;
 
+import com.internship.menagerie.Main;
+
 import java.util.Scanner;
 
 /**
@@ -12,7 +14,7 @@ public class Menagerie {
     }
 
     private static void menagerie_1() {
-
+        Main.main();
     }
 
     private static void menagerie_2() {
