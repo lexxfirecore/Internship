@@ -1,5 +1,6 @@
 package com.internship;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.internship.zoo.Cat;
@@ -23,12 +24,74 @@ public class Recursion {
     }
 
     private static void recursion_2() {
-        
+
     }
 
     private static void recursion_3() {
+        /*
+        Created by Ion 26/04/19
+         */
+        System.out.println("Variant 3 - Ion");
+        System.out.println("Input a number greater or equal 0 and less than " + Integer.MAX_VALUE + ":");
+        Scanner scanner = new Scanner(System.in);
+
+        //Subtask 1
+        int i = getValidatedInt(scanner);
+        if (i >= 0) {
+            System.out.println("!" + i + " = " + factorial(i));
+        }
+
+        //Subtask 2
+        int guests = i;
+        if (guests >= 0) {
+            System.out.println("Numbers of " + guests + " guests handshakes : " + numOfHandShakes(guests));
+
+        }
 
     }
+
+    //factorial() by Ion - Subtask 1
+    public static long factorial(int i) {
+        if (i == 0) {
+            return 1;
+        } else {
+            return (i * factorial(i - 1));
+        }
+    }
+
+    // Ion invention - plizz dont delete from project (recursion example)
+//    public static long numOfHandShakes2(int numOfGuests) {
+//        if (numOfGuests <= 1) {
+//            return 0;
+//        } else {
+//            return (numOfGuests - 1) + numOfHandShakes(numOfGuests - 1);
+//        }
+//    }
+
+    //Subtask 2  Ion - refactored
+    public static long numOfHandShakes(int numOfGuests) {
+        if (numOfGuests >= 1) {
+            return factorial(numOfGuests) / (factorial(numOfGuests - 2) * (factorial(numOfGuests - (numOfGuests - 2))));
+        } else {
+            return 0;
+        }
+    }
+        //Get validated input num - by Ion
+        public static int getValidatedInt (Scanner scanner){
+            try {
+                int i = scanner.nextInt();
+                if (i >= 0 && i <= Integer.MAX_VALUE) {
+                    return i;
+                } else {
+                    System.out.println("Wrong number : Input a number greater or equal 0 and less than " + Integer.MAX_VALUE + ":");
+                    return -1;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Wrong number : Input a number greater or equal 0 and less than " + Integer.MAX_VALUE + ":");
+                return -1;
+            }
+        }
+
 
     private static void menu() {
         Scanner scanner = new Scanner(System.in);
@@ -54,4 +117,6 @@ public class Recursion {
             }
         } while (varianta != 0);
     }
+
+
 }
