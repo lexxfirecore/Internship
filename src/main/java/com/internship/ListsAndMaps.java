@@ -20,7 +20,44 @@ public class ListsAndMaps {
     }
 
     private static void lists_1() {
+        /**
+         * Created by vmarian on 14-Apr-19.
+         */
+        String[] date = {"11", "12", "13", "14", "15"};
 
+        System.out.println("Array unidimensional: " + Arrays.toString(date));
+
+        ArrayList<String> number = new ArrayList<String>();
+        for (int i = 0; i < date.length; i++) {
+            number.add(date[i]);
+        }
+        System.out.println("Array list: " + number);
+
+        number.add("2");
+        System.out.println("Adaugarea unei valori: " + number);
+
+        number.clone();
+        System.out.println("Clonarea:" + number);
+
+        number.remove("12");
+        System.out.println("Stergerea cifrei 12:" + number);
+
+        number.iterator();
+        System.out.println("Iterarea: " + number);
+
+        Map<Integer, String> map = new TreeMap();
+        for (int i = 0; i < date.length; i++) {
+            map.put(i, date[i]);
+        }
+        System.out.println("Printam mapa: " + map);
+
+        map.put(6, (String) "17");
+        map.put(9, (String) "19");
+        System.out.println("Printam mapa + put " + map);
+
+        System.out.println("Printam un element ales cu get: " + map.get(22));
+
+        System.out.println("Printam keyset-urile" + map.keySet());
     }
 
     private static void lists_2() {
